@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: "Inter", sans-serif;
+  }
+
+  body {
+    @apply bg-gray-900 text-gray-100;
+    /* Improve mobile scrolling */
+    -webkit-overflow-scrolling: touch;
+    /* Prevent text size adjustment on iOS */
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Better touch targets */
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    touch-action: manipulation;
+  }
+
+  /* Hide scrollbar for carousel */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Prevent zoom on input focus (iOS) */
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  @media (min-width: 640px) {
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    select,
+    textarea {
+      font-size: inherit;
+    }
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Leaflet map styling - using light tiles for legibility */
+.leaflet-container {
+  background-color: #e5e7eb !important;
+  font-family: inherit;
+}
+
+.leaflet-popup-content-wrapper {
+  background-color: #ffffff;
+  color: #1f2937;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.leaflet-popup-content {
+  margin: 0.75rem;
+  color: #1f2937;
+}
+
+.leaflet-popup-tip {
+  background-color: #ffffff;
+}
+
+.leaflet-control-zoom a {
+  background-color: #374151;
+  color: #f3f4f6;
+  border-color: #4b5563;
+}
+
+.leaflet-control-zoom a:hover {
+  background-color: #4b5563;
+  color: #ffffff;
+}
+
+.leaflet-control-attribution {
+  background-color: rgba(31, 41, 55, 0.8);
+  color: #9ca3af;
+  font-size: 0.75rem;
+}
+
+.leaflet-control-attribution a {
+  color: #60a5fa;
+}
+
+

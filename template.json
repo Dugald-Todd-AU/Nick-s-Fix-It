@@ -1,0 +1,236 @@
+{
+  "name": "tradies",
+  "displayName": "Tradies & Services",
+  "description": "Template for tradespeople, contractors, and service businesses in regional Australia",
+  "vertical": "tradies",
+  "version": "1.0.0",
+  "colors": {
+    "primary": "#f97316",
+    "primaryDark": "#ea580c",
+    "secondary": "#dc2626",
+    "secondaryDark": "#b91c1c"
+  },
+  "requiredFields": {
+    "businessName": {
+      "type": "string",
+      "required": true,
+      "placeholder": "Example Business",
+      "description": "The business name"
+    },
+    "region": {
+      "type": "string",
+      "required": true,
+      "placeholder": "Example Region",
+      "description": "Service area/region or suburbs"
+    },
+    "phone": {
+      "type": "string",
+      "required": true,
+      "placeholder": "{{PHONE_NUMBER}}",
+      "description": "Contact phone number (clickable)"
+    },
+    "email": {
+      "type": "string",
+      "required": false,
+      "placeholder": "{{EMAIL_ADDRESS}}",
+      "description": "Contact email"
+    },
+    "services": {
+      "type": "array",
+      "required": true,
+      "placeholder": "{{SERVICE_1}}, {{SERVICE_2}}, {{SERVICE_3}}",
+      "description": "List of main services offered"
+    },
+    "serviceDescriptions": {
+      "type": "object",
+      "required": false,
+      "placeholder": "Service descriptions object",
+      "description": "Detailed descriptions for each service"
+    },
+    "suburbs": {
+      "type": "array",
+      "required": false,
+      "placeholder": "Suburb list",
+      "description": "List of suburbs serviced"
+    },
+    "address": {
+      "type": "string",
+      "required": false,
+      "placeholder": "{{BUSINESS_ADDRESS}}",
+      "description": "Business address or service region"
+    },
+    "ctaText": {
+      "type": "string",
+      "required": false,
+      "placeholder": "Request a Free Quote",
+      "default": "Request a Free Quote",
+      "description": "Main call-to-action text"
+    },
+    "formEndpoint": {
+      "type": "string",
+      "required": false,
+      "placeholder": "{{FORMSPREE_ENDPOINT}}",
+      "description": "Form submission endpoint (Formspree, FormSubmit, or custom API route)"
+    },
+    "abn": {
+      "type": "string",
+      "required": false,
+      "placeholder": "{{ABN}}",
+      "description": "Australian Business Number (ABN)"
+    },
+    "licenseNumber": {
+      "type": "string",
+      "required": false,
+      "placeholder": "{{LICENSE_NUMBER}}",
+      "description": "Trade license number (e.g., Plumbing License #12345)"
+    },
+    "insuranceProvider": {
+      "type": "string",
+      "required": false,
+      "placeholder": "{{INSURANCE_PROVIDER}}",
+      "description": "Insurance provider name (e.g., AAMI, QBE)"
+    },
+    "yearsExperience": {
+      "type": "string",
+      "required": false,
+      "placeholder": "{{YEARS_EXPERIENCE}}",
+      "description": "Years of experience (e.g., '20+' or '15')"
+    },
+    "operatingHours": {
+      "type": "string",
+      "required": false,
+      "placeholder": "{{OPERATING_HOURS}}",
+      "description": "Operating hours (e.g., 'Mon-Fri: 7am-5pm, Sat: 8am-12pm' or '24/7 Available')"
+    },
+    "socialFacebook": {
+      "type": "string",
+      "required": false,
+      "placeholder": "{{SOCIAL_FACEBOOK}}",
+      "description": "Facebook page URL"
+    },
+    "socialInstagram": {
+      "type": "string",
+      "required": false,
+      "placeholder": "{{SOCIAL_INSTAGRAM}}",
+      "description": "Instagram profile URL"
+    },
+    "socialWebsite": {
+      "type": "string",
+      "required": false,
+      "placeholder": "{{SOCIAL_WEBSITE}}",
+      "description": "Website URL"
+    },
+    "testimonials": {
+      "type": "array",
+      "required": false,
+      "placeholder": "Testimonials array",
+      "description": "Array of testimonial objects"
+    },
+    "projects": {
+      "type": "array",
+      "required": false,
+      "placeholder": "Projects array",
+      "description": "Array of featured project objects"
+    },
+    "newsTitle1": {
+      "type": "string",
+      "required": false,
+      "placeholder": "{{NEWS_TITLE_1}}",
+      "description": "Latest news article title"
+    },
+    "newsExcerpt1": {
+      "type": "string",
+      "required": false,
+      "placeholder": "{{NEWS_EXCERPT_1}}",
+      "description": "Latest news article excerpt"
+    },
+    "tipTitle1": {
+      "type": "string",
+      "required": false,
+      "placeholder": "{{TIP_TITLE_1}}",
+      "description": "Expert tip title"
+    },
+    "tipExcerpt1": {
+      "type": "string",
+      "required": false,
+      "placeholder": "{{TIP_EXCERPT_1}}",
+      "description": "Expert tip excerpt"
+    },
+    "projectSpotlightTitle": {
+      "type": "string",
+      "required": false,
+      "placeholder": "{{PROJECT_SPOTLIGHT_TITLE}}",
+      "description": "Featured project spotlight title"
+    },
+    "projectSpotlightExcerpt": {
+      "type": "string",
+      "required": false,
+      "placeholder": "{{PROJECT_SPOTLIGHT_EXCERPT}}",
+      "description": "Featured project spotlight excerpt"
+    }
+  },
+  "replacements": {
+    "{{BUSINESS_NAME}}": "businessName",
+    "Example Business": "businessName",
+    "{{REGION}}": "region",
+    "Example Region": "region",
+    "{{PHONE_NUMBER}}": "phone",
+    "{{EMAIL_ADDRESS}}": "email",
+    "{{SERVICE_1}}": "services[0]",
+    "{{SERVICE_2}}": "services[1]",
+    "{{SERVICE_3}}": "services[2]",
+    "{{BUSINESS_ADDRESS}}": "address",
+    "{{FORMSPREE_ENDPOINT}}": "formEndpoint",
+    "{{ABN}}": "abn",
+    "{{LICENSE_NUMBER}}": "licenseNumber",
+    "{{INSURANCE_PROVIDER}}": "insuranceProvider",
+    "{{YEARS_EXPERIENCE}}": "yearsExperience",
+    "{{OPERATING_HOURS}}": "operatingHours",
+    "{{SOCIAL_FACEBOOK}}": "socialFacebook",
+    "{{SOCIAL_INSTAGRAM}}": "socialInstagram",
+    "{{SOCIAL_WEBSITE}}": "socialWebsite",
+    "{{TESTIMONIAL_NAME_1}}": "testimonials[0].name",
+    "{{TESTIMONIAL_SUBURB_1}}": "testimonials[0].suburb",
+    "{{TESTIMONIAL_TEXT_1}}": "testimonials[0].text",
+    "{{TESTIMONIAL_NAME_2}}": "testimonials[1].name",
+    "{{TESTIMONIAL_SUBURB_2}}": "testimonials[1].suburb",
+    "{{TESTIMONIAL_TEXT_2}}": "testimonials[1].text",
+    "{{TESTIMONIAL_NAME_3}}": "testimonials[2].name",
+    "{{TESTIMONIAL_SUBURB_3}}": "testimonials[2].suburb",
+    "{{TESTIMONIAL_TEXT_3}}": "testimonials[2].text",
+    "{{TESTIMONIAL_NAME_4}}": "testimonials[3].name",
+    "{{TESTIMONIAL_SUBURB_4}}": "testimonials[3].suburb",
+    "{{TESTIMONIAL_TEXT_4}}": "testimonials[3].text",
+    "{{PROJECT_1_NAME}}": "projects[0].name",
+    "{{PROJECT_1_SUBURB}}": "projects[0].suburb",
+    "{{NEWS_TITLE_1}}": "newsTitle1",
+    "{{NEWS_EXCERPT_1}}": "newsExcerpt1",
+    "{{TIP_TITLE_1}}": "tipTitle1",
+    "{{TIP_EXCERPT_1}}": "tipExcerpt1",
+    "{{PROJECT_SPOTLIGHT_TITLE}}": "projectSpotlightTitle",
+    "{{PROJECT_SPOTLIGHT_EXCERPT}}": "projectSpotlightExcerpt",
+    "Request a Free Quote": "ctaText",
+    "#f97316": "colors.primary",
+    "#ea580c": "colors.primaryDark",
+    "#dc2626": "colors.secondary",
+    "#b91c1c": "colors.secondaryDark"
+  },
+  "pages": [
+    {
+      "path": "/",
+      "name": "Home",
+      "components": ["Header", "Hero", "WhyChooseUs", "Services", "Testimonials", "Gallery", "CTA", "Footer"]
+    },
+    {
+      "path": "/services",
+      "name": "Services",
+      "components": ["Header", "ServicesPage", "MapOrRegionList", "Gallery", "CTA", "Footer"]
+    },
+    {
+      "path": "/contact",
+      "name": "Contact",
+      "components": ["Header", "ContactHero", "ContactForm", "TrustBadges", "Footer"]
+    }
+  ]
+}
+
