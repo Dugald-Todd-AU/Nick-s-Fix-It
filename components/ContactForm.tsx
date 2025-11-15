@@ -30,7 +30,7 @@ export default function ContactForm() {
     try {
       // ZERO SETUP: FormSubmit - No signup required, just uses email address
       // Works automatically if {{EMAIL_ADDRESS}} is configured
-      const emailAddress = "{{EMAIL_ADDRESS}}";
+      const emailAddress: string = "{{EMAIL_ADDRESS}}";
       
       // Check if email is configured (not a placeholder)
       if (emailAddress === "{{EMAIL_ADDRESS}}" || !emailAddress || emailAddress.includes("{{")) {
