@@ -26,7 +26,7 @@ const createDefaultIcon = () => {
 export default function ServiceMap({
   center = [-27.5598, 151.9507], // Toowoomba, Queensland
   zoom = 12,
-  region = "{{REGION}}",
+  region = "Toowoomba & Darling Downs",
   suburbs = [],
 }: ServiceMapProps) {
   const mapRef = useRef<L.Map | null>(null);

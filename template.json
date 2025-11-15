@@ -14,19 +14,19 @@
     "businessName": {
       "type": "string",
       "required": true,
-      "placeholder": "Example Business",
+      "placeholder": "Brendan Coonan Plumbing & Gasfitting",
       "description": "The business name"
     },
     "region": {
       "type": "string",
       "required": true,
-      "placeholder": "Example Region",
+      "placeholder": "Toowoomba & Darling Downs",
       "description": "Service area/region or suburbs"
     },
     "phone": {
       "type": "string",
       "required": true,
-      "placeholder": "{{PHONE_NUMBER}}",
+      "placeholder": "0418 793 898",
       "description": "Contact phone number (clickable)"
     },
     "email": {
@@ -38,7 +38,7 @@
     "services": {
       "type": "array",
       "required": true,
-      "placeholder": "{{SERVICE_1}}, {{SERVICE_2}}, {{SERVICE_3}}",
+      "placeholder": "Plumbing & Gas Fitting, Hot Water System Installations, Emergency Leak Repairs",
       "description": "List of main services offered"
     },
     "serviceDescriptions": {
@@ -56,7 +56,7 @@
     "address": {
       "type": "string",
       "required": false,
-      "placeholder": "{{BUSINESS_ADDRESS}}",
+      "placeholder": "15/19 Wylie St, Toowoomba QLD 4350",
       "description": "Business address or service region"
     },
     "ctaText": {
@@ -93,13 +93,13 @@
     "yearsExperience": {
       "type": "string",
       "required": false,
-      "placeholder": "{{YEARS_EXPERIENCE}}",
+      "placeholder": "over 30 years",
       "description": "Years of experience (e.g., '20+' or '15')"
     },
     "operatingHours": {
       "type": "string",
       "required": false,
-      "placeholder": "{{OPERATING_HOURS}}",
+      "placeholder": "Mon–Fri: 7 am–5 pm",
       "description": "Operating hours (e.g., 'Mon-Fri: 7am-5pm, Sat: 8am-12pm' or '24/7 Available')"
     },
     "socialFacebook": {
@@ -170,22 +170,22 @@
     }
   },
   "replacements": {
-    "{{BUSINESS_NAME}}": "businessName",
-    "Example Business": "businessName",
-    "{{REGION}}": "region",
-    "Example Region": "region",
-    "{{PHONE_NUMBER}}": "phone",
+    "Brendan Coonan Plumbing & Gasfitting": "businessName",
+    "Brendan Coonan Plumbing & Gasfitting": "businessName",
+    "Toowoomba & Darling Downs": "region",
+    "Toowoomba & Darling Downs": "region",
+    "0418 793 898": "phone",
     "{{EMAIL_ADDRESS}}": "email",
-    "{{SERVICE_1}}": "services[0]",
-    "{{SERVICE_2}}": "services[1]",
-    "{{SERVICE_3}}": "services[2]",
-    "{{BUSINESS_ADDRESS}}": "address",
+    "Plumbing & Gas Fitting": "services[0]",
+    "Hot Water System Installations": "services[1]",
+    "Emergency Leak Repairs": "services[2]",
+    "15/19 Wylie St, Toowoomba QLD 4350": "address",
     "{{FORMSPREE_ENDPOINT}}": "formEndpoint",
     "{{ABN}}": "abn",
     "{{LICENSE_NUMBER}}": "licenseNumber",
     "{{INSURANCE_PROVIDER}}": "insuranceProvider",
-    "{{YEARS_EXPERIENCE}}": "yearsExperience",
-    "{{OPERATING_HOURS}}": "operatingHours",
+    "over 30 years": "yearsExperience",
+    "Mon–Fri: 7 am–5 pm": "operatingHours",
     "{{SOCIAL_FACEBOOK}}": "socialFacebook",
     "{{SOCIAL_INSTAGRAM}}": "socialInstagram",
     "{{SOCIAL_WEBSITE}}": "socialWebsite",

@@ -18,9 +18,9 @@ export default function StickyCTA() {
       <div className="container-custom py-1.5 sm:py-3 px-4">
         <div className="flex gap-2 sm:gap-3">
           <a
-            href={`tel:{{PHONE_NUMBER}}`}
+            href={`tel:0418 793 898`}
             className="flex-1 flex items-center justify-center gap-1.5 sm:gap-2 px-2 sm:px-4 py-1.5 sm:py-3 bg-primary hover:bg-primary-dark active:bg-primary-dark text-white rounded-lg font-semibold text-xs sm:text-base transition-all transform active:scale-95 shadow-md touch-manipulation min-h-[32px] sm:min-h-[44px]"
-            aria-label="Call {{PHONE_NUMBER}}"
+            aria-label="Call 0418 793 898"
           >
             <PhoneIcon className="w-3.5 h-3.5 sm:w-5 sm:h-5 flex-shrink-0" />
             <span>Call Now</span>

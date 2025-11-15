@@ -8,9 +8,9 @@ import StickyCTA from "@/components/StickyCTA";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "Example Business | 24/7 Trade Services in Example Region",
-  description: "Example Business provides professional trade services in Example Region. Licensed, insured, and available 24/7. Contact us at {{PHONE_NUMBER}} for a free quote.",
-  keywords: "{{SERVICE_1}}, {{SERVICE_2}}, {{SERVICE_3}}, Example Region, trade services, licensed tradesperson",
+  title: "Brendan Coonan Plumbing & Gasfitting | 24/7 Trade Services in Toowoomba & Darling Downs",
+  description: "Brendan Coonan Plumbing & Gasfitting provides professional trade services in Toowoomba & Darling Downs. Licensed, insured, and available 24/7. Contact us at 0418 793 898 for a free quote.",
+  keywords: "Plumbing & Gas Fitting, Hot Water System Installations, Emergency Leak Repairs, Toowoomba & Darling Downs, trade services, licensed tradesperson",
 };
 
 export default function RootLayout({

@@ -15,12 +15,12 @@ export default function ServicesHero() {
           className="max-w-4xl mx-auto text-center"
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-            <span className="text-primary">Professional {"{{SERVICE_1}}"}</span>
+            <span className="text-primary">Professional {"Plumbing & Gas Fitting"}</span>
             <br />
-            <span className="text-white">Services in {"{{REGION}}"}</span>
+            <span className="text-white">Services in {"Toowoomba & Darling Downs"}</span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 leading-relaxed max-w-3xl mx-auto">
-            Licensed, insured, and trusted trade professionals serving {"{{REGION}}"} with fast response times and quality workmanship.
+            Licensed, insured, and trusted trade professionals serving {"Toowoomba & Darling Downs"} with fast response times and quality workmanship.
           </p>
 
           {/* Service Highlights */}
@@ -47,17 +47,17 @@ export default function ServicesHero() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <a
-              href={`tel:{{PHONE_NUMBER}}`}
+              href={`tel:0418 793 898`}
               className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-primary hover:bg-primary-dark active:bg-primary-dark text-white rounded-lg font-semibold text-base sm:text-lg transition-all active:scale-95 shadow-lg touch-manipulation min-h-[48px]"
             >
               <PhoneIcon className="w-5 h-5 flex-shrink-0" />
-              <span>Call {"{{PHONE_NUMBER}}"}</span>
+              <span>Call {"0418 793 898"}</span>
             </a>
             <Link
               href="/contact"
               className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-secondary hover:bg-secondary-dark active:bg-secondary-dark text-white rounded-lg font-semibold text-base sm:text-lg transition-all active:scale-95 shadow-lg touch-manipulation min-h-[48px]"
             >
-              Request a Free Quote
+              Call now for a free quote!
             </Link>
           </div>
         </motion.div>

@@ -6,9 +6,9 @@ import type { Metadata } from "next";
 
 export function generateMetadata(): Metadata {
   return {
-    title: "Example Business — Professional {{SERVICE_1}} Services in Example Region",
-    description: "Licensed and insured tradie services in Example Region. Call {{PHONE_NUMBER}} for fast and reliable service.",
-    keywords: "{{SERVICE_1}}, {{SERVICE_2}}, tradies, plumbing, electrical, Example Region",
+    title: "Brendan Coonan Plumbing & Gasfitting — Professional Plumbing & Gas Fitting Services in Toowoomba & Darling Downs",
+    description: "Licensed and insured tradie services in Toowoomba & Darling Downs. Call 0418 793 898 for fast and reliable service.",
+    keywords: "Plumbing & Gas Fitting, Hot Water System Installations, tradies, plumbing, electrical, Toowoomba & Darling Downs",
   };
 }
 

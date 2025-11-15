@@ -6,24 +6,30 @@ import {
   WrenchScrewdriverIcon,
   BoltIcon,
   HomeIcon,
+  CogIcon,
 } from "@heroicons/react/24/solid";
 
 export default function Services() {
   const services = [
     {
-      title: "{{SERVICE_1}}",
-      description: `Expert {{SERVICE_1}} services for residential and commercial properties in Example Region. Licensed professionals available 24/7 for emergency call-outs.`,
+      title: "Plumbing & Gas Fitting",
+      description: `Expert plumbing and gas fitting services for residential and commercial properties. Licensed professionals available 24/7.`,
       icon: WrenchScrewdriverIcon,
     },
     {
-      title: "{{SERVICE_2}}",
-      description: `Professional {{SERVICE_2}} solutions with fast response times. Fully insured and qualified tradespeople serving Example Region.`,
+      title: "Hot Water System Installations",
+      description: `Professional hot water system installations and repairs. Fast response times with fully insured tradespeople.`,
       icon: BoltIcon,
     },
     {
-      title: "{{SERVICE_3}}",
-      description: `Reliable {{SERVICE_3}} expertise you can trust. Quality workmanship and excellent customer service throughout Example Region.`,
+      title: "Emergency Leak Repairs",
+      description: `Reliable 24/7 emergency leak repairs. Quality workmanship and fast response times throughout Toowoomba & Darling Downs.`,
       icon: HomeIcon,
+    },
+    {
+      title: "Custom Jobs & General Plumbing",
+      description: `Custom plumbing projects, general maintenance, and expert advice for all your plumbing and gasfitting needs.`,
+      icon: CogIcon,
     },
   ];
 
@@ -42,7 +48,7 @@ export default function Services() {
             Professional services you can trust
           </p>
         </motion.div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {services.map((service, index) => (
             <ServiceCard
               key={index}
@@ -50,6 +56,9 @@ export default function Services() {
               description={service.description}
               icon={service.icon}
               index={index}
+              href="/services"
+              ctaText="View More"
+              showPhoneIcon={false}
             />
           ))}
         </div>

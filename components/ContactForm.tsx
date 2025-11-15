@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import { PhoneIcon, EnvelopeIcon, UserIcon, WrenchScrewdriverIcon } from "@heroicons/react/24/outline";
 
 export default function ContactForm() {
+  const [isMounted, setIsMounted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -16,6 +16,11 @@ export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Ensure client-side only rendering to prevent hydration errors
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -91,17 +96,37 @@ export default function ContactForm() {
     });
   };
 
+  // Don't render until mounted to prevent hydration errors
+  if (!isMounted) {
+    return (
+      <section className="py-12 md:py-20 bg-gray-800">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            <div className="animate-pulse">
+              <div className="h-8 bg-gray-700 rounded w-48 mb-4"></div>
+              <div className="h-4 bg-gray-700 rounded w-full mb-6"></div>
+            </div>
+            <div className="bg-gray-700 p-8 rounded-lg animate-pulse">
+              <div className="h-6 bg-gray-600 rounded w-32 mb-6"></div>
+              <div className="space-y-4">
+                <div className="h-12 bg-gray-600 rounded"></div>
+                <div className="h-12 bg-gray-600 rounded"></div>
+                <div className="h-12 bg-gray-600 rounded"></div>
+                <div className="h-32 bg-gray-600 rounded"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="py-12 md:py-20 bg-gray-800">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Information */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <div className={`transition-opacity duration-600 ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Get In Touch</h2>
             <p className="text-gray-300 mb-6 sm:mb-8 text-base sm:text-lg leading-relaxed">
               Ready to get started? Contact us today for a free quote or to discuss your project.
@@ -115,10 +140,10 @@ export default function ContactForm() {
                 <div>
                   <h3 className="font-semibold text-white mb-1">Phone</h3>
                   <a
-                    href={`tel:{{PHONE_NUMBER}}`}
+                    href={`tel:0418 793 898`}
                     className="text-primary hover:text-primary-dark transition-colors text-lg"
                   >
-                    {"{{PHONE_NUMBER}}"}
+                    {"0418 793 898"}
                   </a>
                   <p className="text-gray-400 text-sm mt-1">24/7 Emergency Service</p>
                 </div>
@@ -147,22 +172,16 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-white mb-1">Service Area</h3>
-                  <p className="text-gray-300">{"Example Region"}</p>
-                  <p className="text-gray-400 text-sm mt-1">{"{{BUSINESS_ADDRESS}}"}</p>
+                  <p className="text-gray-300">{"Toowoomba & Darling Downs"}</p>
+                  <p className="text-gray-400 text-sm mt-1">{"15/19 Wylie St, Toowoomba QLD 4350"}</p>
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Contact Form */}
-          <motion.div
-            initial={{opacity: 0, x: 20}}
-            whileInView={{opacity: 1, x: 0}}
-            viewport={{once: true}}
-            transition={{duration: 0.6}}
-            className="bg-gray-700 p-4 sm:p-6 md:p-8 rounded-lg"
-          >
-            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Request a Free Quote</h3>
+          <div className={`bg-gray-700 p-4 sm:p-6 md:p-8 rounded-lg transition-opacity duration-600 ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Call now for a free quote!</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
@@ -238,9 +257,9 @@ export default function ContactForm() {
                   className="w-full px-4 py-3.5 sm:py-3 text-base bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary touch-manipulation appearance-none"
                 >
                   <option value="">Select a service</option>
-                  <option value={"{{SERVICE_1}}"}>{"{{SERVICE_1}}"}</option>
-                  <option value={"{{SERVICE_2}}"}>{"{{SERVICE_2}}"}</option>
-                  <option value={"{{SERVICE_3}}"}>{"{{SERVICE_3}}"}</option>
+                  <option value={"Plumbing & Gas Fitting"}>{"Plumbing & Gas Fitting"}</option>
+                  <option value={"Hot Water System Installations"}>{"Hot Water System Installations"}</option>
+                  <option value={"Emergency Leak Repairs"}>{"Emergency Leak Repairs"}</option>
                   <option value="other">Other</option>
                 </select>
               </div>
@@ -306,7 +325,7 @@ export default function ContactForm() {
                 )}
               </button>
             </form>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

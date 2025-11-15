@@ -1,10 +1,11 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { MapPinIcon } from "@heroicons/react/24/solid";
 import dynamic from "next/dynamic";
 
-// Dynamically import map to avoid SSR issues
+// Dynamically import map to avoid SSR issues - with safer client-side mounting
 const ServiceMap = dynamic(() => import("./ServiceMap"), {
   ssr: false,
   loading: () => (
@@ -18,14 +19,34 @@ const ServiceMap = dynamic(() => import("./ServiceMap"), {
 });
 
 export default function MapOrRegionList() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  // Ensure client-side only rendering to prevent hydration errors
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
   // Example suburbs - would be replaced with actual data
   const suburbs = [
-    "Suburb 1",
-    "Suburb 2",
-    "Suburb 3",
-    "Suburb 4",
-    "Suburb 5",
-    "Suburb 6",
+    "Toowoomba City",
+    "East Toowoomba",
+    "South Toowoomba",
+    "North Toowoomba",
+    "Centenary Heights",
+    "Kearneys Spring",
+    "Middle Ridge",
+    "Mount Lofty",
+    "Rangeville",
+    "Wilsonton",
+    "Harristown",
+    "Newtown",
+    "Darling Heights",
+    "Highfields",
+    "Cambooya",
+    "Clifton",
+    "Gatton",
+    "Pittsworth",
+    "Oakey",
+    "Dalby",
   ];
 
   return (
@@ -40,12 +61,13 @@ export default function MapOrRegionList() {
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 px-4">Service Areas</h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-            We proudly serve {"{{REGION}}"} and surrounding areas
+            We proudly serve {"Toowoomba & Darling Downs"} and surrounding areas
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {/* Interactive Map */}
+          {isMounted ? (
           <motion.div
             initial={{opacity: 0, x: -20}}
             whileInView={{opacity: 1, x: 0}}
@@ -53,8 +75,16 @@ export default function MapOrRegionList() {
             transition={{duration: 0.6}}
             className="bg-gray-700 rounded-lg p-1 sm:p-2 overflow-hidden"
           >
-            <ServiceMap region={"{{REGION}}"} suburbs={suburbs} />
+            <ServiceMap region={"Toowoomba & Darling Downs"} suburbs={suburbs} />
           </motion.div>
+          ) : (
+            <div className="bg-gray-700 rounded-lg p-1 sm:p-2 overflow-hidden min-h-[400px] flex items-center justify-center">
+              <div className="text-center">
+                <MapPinIcon className="w-16 h-16 text-primary mx-auto mb-4 animate-pulse" />
+                <p className="text-gray-400">Loading map...</p>
+              </div>
+            </div>
+          )}
 
           {/* Suburb List */}
           <motion.div

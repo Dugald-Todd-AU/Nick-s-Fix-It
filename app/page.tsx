@@ -1,4 +1,4 @@
-import Hero from "@/components/Hero";
+import ExperienceCounter from "@/components/ExperienceCounter";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Services from "@/components/Services";
 import ServiceArea from "@/components/ServiceArea";
@@ -9,12 +9,12 @@ import CTA from "@/components/CTA";
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <Hero />
-      <WhyChooseUs />
+      <ExperienceCounter years={28} region="Toowoomba & Darling Downs" />
       <Services />
-      <ServiceArea />
       <Testimonials />
-      <GalleryGrid title="Completed Jobs Photos" subtitle="Real projects we've completed for customers in {{REGION}}" />
+      <WhyChooseUs />
+      <ServiceArea />
+      <GalleryGrid title="Completed Jobs Photos" subtitle="Real projects we've completed for customers in Toowoomba & Darling Downs" />
       <CTA />
     </main>
   );

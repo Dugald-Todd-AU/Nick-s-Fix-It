@@ -23,7 +23,7 @@ export default function WhyChooseUs() {
     {
       icon: MapPinIcon,
       title: "Local & Trusted",
-      description: `Serving Example Region with local expertise and reliability`,
+      description: `Serving Toowoomba & Darling Downs with local expertise and reliability`,
     },
     {
       icon: CheckBadgeIcon,
@@ -44,7 +44,7 @@ export default function WhyChooseUs() {
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 px-4">Why Choose Us</h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-            Trusted trade professionals serving {"Example Region"}
+            Trusted trade professionals serving {"Toowoomba & Darling Downs"}
           </p>
         </motion.div>
 
