@@ -9,9 +9,9 @@ export default function Logo() {
         src="/AH 1 (1).png"
         alt="AMBER"
         title="AMBER"
-        width={200}
-        height={60}
-        className="h-7 sm:h-9 md:h-10 w-auto"
+        width={300}
+        height={90}
+        className="h-11 sm:h-14 md:h-[60px] w-auto"
         priority
       />
     </div>

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function ExperienceCounter() {
   return (
-    <section className="relative min-h-[85vh] sm:min-h-screen flex items-center py-12 sm:py-16 md:py-20 overflow-hidden">
+    <section className="relative min-h-[85vh] sm:min-h-screen md:min-h-[68.75vh] flex items-center py-12 sm:py-16 md:py-20 overflow-hidden">
       {/* Background Image - Mobile */}
       <div className="absolute inset-0 z-0 md:hidden">
         <Image
@@ -37,12 +37,12 @@ export default function ExperienceCounter() {
       {/* Subtle gradient from bottom for legibility */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none z-[1]"></div>
       
-      <div className="container-custom relative z-10 w-full flex flex-col items-center justify-end pb-12 sm:pb-16 md:pb-20 min-h-[85vh] sm:min-h-screen">
+      <div className="relative z-10 w-full flex flex-col items-center md:items-start justify-end pb-12 sm:pb-16 md:pb-20 min-h-[85vh] sm:min-h-screen md:min-h-[68.75vh] px-4 sm:px-6 lg:px-8 md:max-w-none">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-center max-w-3xl mx-auto px-4"
+          className="text-center md:text-left max-w-3xl mx-auto md:mx-0 md:max-w-lg md:px-0"
         >
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-5 md:mb-6 leading-tight">
