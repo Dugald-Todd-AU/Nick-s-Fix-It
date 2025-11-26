@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function ServicesHero() {
   return (
-    <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-12 sm:py-16 md:py-20">
+    <section className="relative bg-gradient-to-br from-black via-gray-900 to-black py-12 sm:py-16 md:py-20">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

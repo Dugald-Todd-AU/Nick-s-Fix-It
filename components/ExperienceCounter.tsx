@@ -79,9 +79,9 @@ export default function ExperienceCounter({
   }, [isMounted, years]);
 
   return (
-    <section className="relative min-h-[85vh] sm:min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-12 sm:py-16 md:py-20 overflow-hidden">
+    <section className="relative min-h-[85vh] sm:min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-black py-12 sm:py-16 md:py-20 overflow-hidden">
       {/* Enhanced background effects for hero prominence */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-gray-900/30 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-black/30 pointer-events-none"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(249,115,22,0.1),transparent_70%)] pointer-events-none"></div>
       
       <div className="container-custom relative z-10">

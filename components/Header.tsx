@@ -9,7 +9,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
+    <header className="sticky top-0 z-50 bg-black/95 backdrop-blur-sm border-b border-black/20">
       <div className="container-custom">
         <div className="flex items-center justify-between h-14 sm:h-16 md:h-20">
           {/* Logo */}
@@ -72,27 +72,27 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+          {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-800 animate-in slide-in-from-top">
+          <div className="md:hidden py-4 border-t border-black/20 animate-in slide-in-from-top">
             <nav className="flex flex-col space-y-2">
               <Link
                 href="/"
-                className="px-4 py-3 text-base text-gray-300 hover:text-primary hover:bg-gray-800 rounded-lg transition-colors font-medium touch-manipulation min-h-[44px] flex items-center"
+                className="px-4 py-3 text-base text-gray-300 hover:text-primary hover:bg-black/30 rounded-lg transition-colors font-medium touch-manipulation min-h-[44px] flex items-center"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
                 href="/services"
-                className="px-4 py-3 text-base text-gray-300 hover:text-primary hover:bg-gray-800 rounded-lg transition-colors font-medium touch-manipulation min-h-[44px] flex items-center"
+                className="px-4 py-3 text-base text-gray-300 hover:text-primary hover:bg-black/30 rounded-lg transition-colors font-medium touch-manipulation min-h-[44px] flex items-center"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Services
               </Link>
               <Link
                 href="/contact"
-                className="px-4 py-3 text-base text-gray-300 hover:text-primary hover:bg-gray-800 rounded-lg transition-colors font-medium touch-manipulation min-h-[44px] flex items-center"
+                className="px-4 py-3 text-base text-gray-300 hover:text-primary hover:bg-black/30 rounded-lg transition-colors font-medium touch-manipulation min-h-[44px] flex items-center"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact

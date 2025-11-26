@@ -13,7 +13,7 @@ export default function ContactHero() {
 
   if (!isMounted) {
     return (
-      <section className="relative py-12 md:py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+      <section className="relative py-12 md:py-20 bg-gradient-to-br from-black via-gray-900 to-black">
         <div className="container-custom">
           <div className="text-center animate-pulse">
             <div className="h-12 bg-gray-700 rounded w-64 mx-auto mb-4"></div>

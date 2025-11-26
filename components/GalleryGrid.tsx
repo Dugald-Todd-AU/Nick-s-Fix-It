@@ -71,7 +71,7 @@ export default function GalleryGrid({
   const handleMouseLeave = () => setIsPaused(false);
 
   return (
-    <section className="py-12 md:py-20 bg-gray-900">
+    <section className="py-12 md:py-20 bg-black">
       <div className="container-custom">
         {(title || subtitle) && (
           <motion.div

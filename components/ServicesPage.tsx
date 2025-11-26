@@ -70,7 +70,7 @@ export default function ServicesPage() {
   ];
 
   return (
-    <section className="pt-12 md:pt-20 pb-12 md:pb-20 bg-gray-900">
+    <section className="pt-12 md:pt-20 pb-12 md:pb-20 bg-black">
       <div className="container-custom">
         {/* Title Block */}
         <motion.div

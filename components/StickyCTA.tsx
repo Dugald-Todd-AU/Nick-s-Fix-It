@@ -10,7 +10,7 @@ export default function StickyCTA() {
       initial={{ y: 100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
-      className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-gray-900 border-t border-gray-800 shadow-lg"
+      className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-black border-t border-black/20 shadow-lg"
       style={{
         paddingBottom: "env(safe-area-inset-bottom)",
       }}

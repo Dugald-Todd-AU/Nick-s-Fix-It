@@ -3,7 +3,7 @@ import { PhoneIcon, EnvelopeIcon, MapPinIcon, ClockIcon, GlobeAltIcon } from "@h
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 border-t border-gray-800 py-8 sm:py-12 md:py-16">
+    <footer className="bg-black border-t border-black/20 py-8 sm:py-12 md:py-16">
       <div className="container-custom">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
           {/* Business Info */}
@@ -99,7 +99,7 @@ export default function Footer() {
         </div>
 
         {/* Social Links */}
-        <div className="pt-8 border-t border-gray-800 mb-6">
+        <div className="pt-8 border-t border-black/20 mb-6">
           <div className="flex items-center justify-center gap-4">
             {("{{SOCIAL_FACEBOOK}}" !== "{{SOCIAL_FACEBOOK}}") && (
               <a
@@ -142,7 +142,7 @@ export default function Footer() {
         </div>
 
         {/* Legal Information */}
-        <div className="pt-6 border-t border-gray-800 mb-4">
+        <div className="pt-6 border-t border-black/20 mb-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-gray-500">
             <div>
               <span className="font-medium text-gray-400">Location:</span> St George, Queensland
@@ -157,7 +157,7 @@ export default function Footer() {
         </div>
 
         {/* Legal Links & Copyright */}
-        <div className="pt-6 border-t border-gray-800">
+        <div className="pt-6 border-t border-black/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm text-center md:text-left">
               © {new Date().getFullYear()} {"Amber's Hair Parlour"}. All rights reserved.

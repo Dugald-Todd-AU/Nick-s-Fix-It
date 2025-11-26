@@ -5,7 +5,7 @@ import { PhoneIcon } from "@heroicons/react/24/solid";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[85vh] sm:min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-12 sm:py-0">
+    <section className="relative min-h-[85vh] sm:min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-black py-12 sm:py-0">
       <div className="container-custom text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
