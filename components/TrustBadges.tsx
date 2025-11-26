@@ -4,9 +4,9 @@ import { ShieldCheckIcon, AcademicCapIcon, ClockIcon } from "@heroicons/react/24
 
 export default function TrustBadges() {
   const badges = [
-    { icon: ShieldCheckIcon, text: "Licensed" },
-    { icon: AcademicCapIcon, text: "Qualified" },
-    { icon: ClockIcon, text: "24/7 Available" },
+    { icon: ShieldCheckIcon, text: "Experienced Stylists" },
+    { icon: AcademicCapIcon, text: "Modern Techniques" },
+    { icon: ClockIcon, text: "Personalised Service" },
   ];
 
   return (

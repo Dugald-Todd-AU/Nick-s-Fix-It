@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { PhoneIcon, EnvelopeIcon, UserIcon, WrenchScrewdriverIcon } from "@heroicons/react/24/outline";
+import { PhoneIcon, EnvelopeIcon, UserIcon, ScissorsIcon } from "@heroicons/react/24/outline";
 
 export default function ContactForm() {
   const [isMounted, setIsMounted] = useState(false);
@@ -60,7 +60,7 @@ export default function ContactForm() {
           email: formData.email,
           service: formData.serviceNeeded,
           message: formData.message,
-          _subject: `Quote Request: ${formData.serviceNeeded} - ${formData.name}`,
+          _subject: `Appointment Request: ${formData.serviceNeeded} - ${formData.name}`,
           _template: "table",
           _captcha: "false", // Optional: set to "true" to enable reCAPTCHA
         }),
@@ -129,7 +129,7 @@ export default function ContactForm() {
           <div className={`transition-opacity duration-600 ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Get In Touch</h2>
             <p className="text-gray-300 mb-6 sm:mb-8 text-base sm:text-lg leading-relaxed">
-              Ready to get started? Contact us today for a free quote or to discuss your project.
+              Ready to book your appointment? Contact us today to schedule your cut, colour, or styling service.
             </p>
 
             <div className="space-y-6">
@@ -140,12 +140,12 @@ export default function ContactForm() {
                 <div>
                   <h3 className="font-semibold text-white mb-1">Phone</h3>
                   <a
-                    href={`tel:0418 793 898`}
+                    href={`tel:0746251693`}
                     className="text-primary hover:text-primary-dark transition-colors text-lg"
                   >
-                    {"0418 793 898"}
+                    {"(07) 4625 1693"}
                   </a>
-                  <p className="text-gray-400 text-sm mt-1">24/7 Emergency Service</p>
+                  <p className="text-gray-400 text-sm mt-1">Call to book your appointment</p>
                 </div>
               </div>
 
@@ -168,12 +168,12 @@ export default function ContactForm() {
 
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <WrenchScrewdriverIcon className="w-6 h-6 text-primary" />
+                  <ScissorsIcon className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-white mb-1">Service Area</h3>
-                  <p className="text-gray-300">{"Toowoomba & Darling Downs"}</p>
-                  <p className="text-gray-400 text-sm mt-1">{"15/19 Wylie St, Toowoomba QLD 4350"}</p>
+                  <h3 className="font-semibold text-white mb-1">Location</h3>
+                  <p className="text-gray-300">{"St George, Queensland"}</p>
+                  <p className="text-gray-400 text-sm mt-1">Boutique hair salon serving the St George community</p>
                 </div>
               </div>
             </div>
@@ -181,7 +181,7 @@ export default function ContactForm() {
 
           {/* Contact Form */}
           <div className={`bg-gray-700 p-4 sm:p-6 md:p-8 rounded-lg transition-opacity duration-600 ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
-            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Call now for a free quote!</h3>
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Book your appointment</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
@@ -257,9 +257,10 @@ export default function ContactForm() {
                   className="w-full px-4 py-3.5 sm:py-3 text-base bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary touch-manipulation appearance-none"
                 >
                   <option value="">Select a service</option>
-                  <option value={"Plumbing & Gas Fitting"}>{"Plumbing & Gas Fitting"}</option>
-                  <option value={"Hot Water System Installations"}>{"Hot Water System Installations"}</option>
-                  <option value={"Emergency Leak Repairs"}>{"Emergency Leak Repairs"}</option>
+                  <option value={"Women's Cuts & Styling"}>{"Women's Cuts & Styling"}</option>
+                  <option value={"Colour, Foils & Lightening"}>{"Colour, Foils & Lightening"}</option>
+                  <option value={"Men's Cuts"}>{"Men's Cuts"}</option>
+                  <option value={"Special Occasion Hair"}>{"Special Occasion Hair"}</option>
                   <option value="other">Other</option>
                 </select>
               </div>
@@ -275,7 +276,7 @@ export default function ContactForm() {
                   value={formData.message}
                   onChange={handleChange}
                   className="w-full px-4 py-3.5 sm:py-3 text-base bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary resize-none touch-manipulation"
-                  placeholder="Tell us about your project..."
+                  placeholder="Tell us about your hair service needs..."
                 />
               </div>
 

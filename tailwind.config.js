@@ -10,16 +10,16 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#f97316", // orange-500 - energy, action (from signage)
-          dark: "#ea580c", // orange-600 - darker shade for hover states
+          DEFAULT: "#d4a574", // warm bone/ivory - from bull skull aesthetic
+          dark: "#b8956a", // darker shade for hover states
         },
         secondary: {
-          DEFAULT: "#dc2626", // red-600 - complementary accent color
-          dark: "#b91c1c", // red-700 - darker shade for hover states
+          DEFAULT: "#c08497", // soft pink/purple - from floral crown
+          dark: "#a87085", // darker shade for hover states
         },
         accent: {
-          DEFAULT: "#dc2626", // Alias for secondary
-          dark: "#b91c1c",
+          DEFAULT: "#a8c5a0", // soft green - from floral crown
+          dark: "#8fb085",
         },
       },
       fontFamily: {

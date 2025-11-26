@@ -9,12 +9,12 @@ import CTA from "@/components/CTA";
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <ExperienceCounter years={28} region="Toowoomba & Darling Downs" />
+      <ExperienceCounter years={15} region="St George, Queensland" />
       <Services />
       <Testimonials />
       <WhyChooseUs />
       <ServiceArea />
-      <GalleryGrid title="Completed Jobs Photos" subtitle="Real projects we've completed for customers in Toowoomba & Darling Downs" />
+      <GalleryGrid title="Our Work" subtitle="Hair transformations and styling at Amber's Hair Parlour" />
       <CTA />
     </main>
   );

@@ -15,21 +15,21 @@ export default function ServicesHero() {
           className="max-w-4xl mx-auto text-center"
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-            <span className="text-primary">Professional {"Plumbing & Gas Fitting"}</span>
+            <span className="text-primary">Modern Hairdressing</span>
             <br />
-            <span className="text-white">Services in {"Toowoomba & Darling Downs"}</span>
+            <span className="text-white">Services in St George, Queensland</span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 leading-relaxed max-w-3xl mx-auto">
-            Licensed, insured, and trusted trade professionals serving {"Toowoomba & Darling Downs"} with fast response times and quality workmanship.
+            Experienced stylists offering personalised service and modern techniques in a warm, boutique hair parlour serving St George.
           </p>
 
           {/* Service Highlights */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 sm:mb-8 max-w-2xl mx-auto">
             {[
-              "Licensed & Qualified Professionals",
-              "24/7 Emergency Service Available",
-              "Fast Response Times",
-              "Quality Workmanship Guaranteed",
+              "Experienced Stylists",
+              "Personalised Service",
+              "Modern Techniques",
+              "Boutique Salon Experience",
             ].map((feature, index) => (
               <motion.div
                 key={index}
@@ -47,17 +47,17 @@ export default function ServicesHero() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <a
-              href={`tel:0418 793 898`}
+              href={`tel:0746251693`}
               className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-primary hover:bg-primary-dark active:bg-primary-dark text-white rounded-lg font-semibold text-base sm:text-lg transition-all active:scale-95 shadow-lg touch-manipulation min-h-[48px]"
             >
               <PhoneIcon className="w-5 h-5 flex-shrink-0" />
-              <span>Call {"0418 793 898"}</span>
+              <span>Call {"(07) 4625 1693"}</span>
             </a>
             <Link
               href="/contact"
               className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-secondary hover:bg-secondary-dark active:bg-secondary-dark text-white rounded-lg font-semibold text-base sm:text-lg transition-all active:scale-95 shadow-lg touch-manipulation min-h-[48px]"
             >
-              Call now for a free quote!
+              Book your appointment
             </Link>
           </div>
         </motion.div>

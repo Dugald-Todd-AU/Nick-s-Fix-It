@@ -27,26 +27,14 @@ export default function MapOrRegionList() {
   }, []);
   // Example suburbs - would be replaced with actual data
   const suburbs = [
-    "Toowoomba City",
-    "East Toowoomba",
-    "South Toowoomba",
-    "North Toowoomba",
-    "Centenary Heights",
-    "Kearneys Spring",
-    "Middle Ridge",
-    "Mount Lofty",
-    "Rangeville",
-    "Wilsonton",
-    "Harristown",
-    "Newtown",
-    "Darling Heights",
-    "Highfields",
-    "Cambooya",
-    "Clifton",
-    "Gatton",
-    "Pittsworth",
-    "Oakey",
-    "Dalby",
+    "St George",
+    "Dirranbandi",
+    "Bollon",
+    "Thallon",
+    "Nindigully",
+    "Hebel",
+    "Mungindi",
+    "Surrounding areas",
   ];
 
   return (
@@ -61,7 +49,7 @@ export default function MapOrRegionList() {
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 px-4">Service Areas</h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-            We proudly serve {"Toowoomba & Darling Downs"} and surrounding areas
+            Serving St George and surrounding areas in Queensland
           </p>
         </motion.div>
 
@@ -75,7 +63,7 @@ export default function MapOrRegionList() {
             transition={{duration: 0.6}}
             className="bg-gray-700 rounded-lg p-1 sm:p-2 overflow-hidden"
           >
-            <ServiceMap region={"Toowoomba & Darling Downs"} suburbs={suburbs} />
+            <ServiceMap region={"St George, Queensland"} suburbs={suburbs} />
           </motion.div>
           ) : (
             <div className="bg-gray-700 rounded-lg p-1 sm:p-2 overflow-hidden min-h-[400px] flex items-center justify-center">

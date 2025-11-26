@@ -37,7 +37,7 @@ interface ServiceAreaProps {
 }
 
 export default function ServiceArea({
-  region = "Toowoomba & Darling Downs",
+  region = "St George, Queensland",
   suburbs = [],
   showMap = true,
 }: ServiceAreaProps) {
@@ -55,26 +55,14 @@ export default function ServiceArea({
     return () => clearTimeout(timer);
   }, []);
   const defaultSuburbs = [
-    "Toowoomba City",
-    "East Toowoomba",
-    "South Toowoomba",
-    "North Toowoomba",
-    "Centenary Heights",
-    "Kearneys Spring",
-    "Middle Ridge",
-    "Mount Lofty",
-    "Rangeville",
-    "Wilsonton",
-    "Harristown",
-    "Newtown",
-    "Darling Heights",
-    "Highfields",
-    "Cambooya",
-    "Clifton",
-    "Gatton",
-    "Pittsworth",
-    "Oakey",
-    "Dalby",
+    "St George",
+    "Dirranbandi",
+    "Bollon",
+    "Thallon",
+    "Nindigully",
+    "Hebel",
+    "Mungindi",
+    "Surrounding areas",
   ];
 
   const displaySuburbs = suburbs.length > 0 ? suburbs : defaultSuburbs;
@@ -87,7 +75,7 @@ export default function ServiceArea({
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 px-4">Service Areas</h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-              We proudly serve {region} and surrounding areas
+              Serving St George and surrounding areas in Queensland
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">

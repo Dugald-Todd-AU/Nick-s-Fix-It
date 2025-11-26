@@ -6,9 +6,9 @@ import type { Metadata } from "next";
 
 export function generateMetadata(): Metadata {
   return {
-    title: "Brendan Coonan Plumbing & Gasfitting — Professional Plumbing & Gas Fitting Services in Toowoomba & Darling Downs",
-    description: "Licensed and insured tradie services in Toowoomba & Darling Downs. Call 0418 793 898 for fast and reliable service.",
-    keywords: "Plumbing & Gas Fitting, Hot Water System Installations, tradies, plumbing, electrical, Toowoomba & Darling Downs",
+    title: "Amber's Hair Parlour — Modern Hairdressing in St George, Queensland",
+    description: "Amber's Hair Parlour offers modern hairdressing services in St George, Queensland. Cuts, colours, foils & styling in a warm, boutique hair parlour. Book your appointment at (07) 4625 1693.",
+    keywords: "hairdressing, hair salon, haircuts, hair colour, foils, styling, St George Queensland, ladies hair, men's cuts, special occasion hair",
   };
 }
 

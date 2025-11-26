@@ -3,33 +3,33 @@
 import { motion } from "framer-motion";
 import ServiceCard from "./ServiceCard";
 import {
-  WrenchScrewdriverIcon,
-  BoltIcon,
-  HomeIcon,
-  CogIcon,
+  ScissorsIcon,
+  SparklesIcon,
+  UserIcon,
+  HeartIcon,
 } from "@heroicons/react/24/solid";
 
 export default function Services() {
   const services = [
     {
-      title: "Plumbing & Gas Fitting",
-      description: `Expert plumbing and gas fitting services for residential and commercial properties. Licensed professionals available 24/7.`,
-      icon: WrenchScrewdriverIcon,
+      title: "Women's Cuts & Styling",
+      description: `Expert haircuts and styling for all hair types. From classic cuts to modern trends, personalised service in our boutique salon.`,
+      icon: ScissorsIcon,
     },
     {
-      title: "Hot Water System Installations",
-      description: `Professional hot water system installations and repairs. Fast response times with fully insured tradespeople.`,
-      icon: BoltIcon,
+      title: "Colour, Foils & Lightening",
+      description: `Professional colour services including full colour, foils, balayage, and lightening. Transform your look with modern techniques.`,
+      icon: SparklesIcon,
     },
     {
-      title: "Emergency Leak Repairs",
-      description: `Reliable 24/7 emergency leak repairs. Quality workmanship and fast response times throughout Toowoomba & Darling Downs.`,
-      icon: HomeIcon,
+      title: "Men's Cuts",
+      description: `Classic and contemporary men's haircuts. Precision cuts tailored to your style in a welcoming, boutique atmosphere.`,
+      icon: UserIcon,
     },
     {
-      title: "Custom Jobs & General Plumbing",
-      description: `Custom plumbing projects, general maintenance, and expert advice for all your plumbing and gasfitting needs.`,
-      icon: CogIcon,
+      title: "Special Occasion Hair",
+      description: `Perfect styling for formals, weddings, and special events. Let us create a look that makes you feel beautiful and confident.`,
+      icon: HeartIcon,
     },
   ];
 
@@ -45,7 +45,7 @@ export default function Services() {
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 px-4">Our Services</h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-            Professional services you can trust
+            Whether you're after a fresh cut, a full colour transformation, or something special for an event, Amber's Hair Parlour offers personalised styling for all hair types.
           </p>
         </motion.div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">

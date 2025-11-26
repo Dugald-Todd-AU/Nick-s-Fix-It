@@ -1,32 +1,32 @@
 {
-  "name": "tradies",
-  "displayName": "Tradies & Services",
-  "description": "Template for tradespeople, contractors, and service businesses in regional Australia",
-  "vertical": "tradies",
+  "name": "hairdressing",
+  "displayName": "Hair Salon",
+  "description": "Template for hairdressing salons and beauty businesses in regional Australia",
+  "vertical": "hairdressing",
   "version": "1.0.0",
   "colors": {
-    "primary": "#f97316",
-    "primaryDark": "#ea580c",
-    "secondary": "#dc2626",
-    "secondaryDark": "#b91c1c"
+    "primary": "#d4a574",
+    "primaryDark": "#b8956a",
+    "secondary": "#c08497",
+    "secondaryDark": "#a87085"
   },
   "requiredFields": {
     "businessName": {
       "type": "string",
       "required": true,
-      "placeholder": "Brendan Coonan Plumbing & Gasfitting",
+      "placeholder": "Amber's Hair Parlour",
       "description": "The business name"
     },
     "region": {
       "type": "string",
       "required": true,
-      "placeholder": "Toowoomba & Darling Downs",
+      "placeholder": "St George, Queensland",
       "description": "Service area/region or suburbs"
     },
     "phone": {
       "type": "string",
       "required": true,
-      "placeholder": "0418 793 898",
+      "placeholder": "(07) 4625 1693",
       "description": "Contact phone number (clickable)"
     },
     "email": {
@@ -38,7 +38,7 @@
     "services": {
       "type": "array",
       "required": true,
-      "placeholder": "Plumbing & Gas Fitting, Hot Water System Installations, Emergency Leak Repairs",
+      "placeholder": "Women's Cuts & Styling, Colour Foils & Lightening, Men's Cuts, Special Occasion Hair",
       "description": "List of main services offered"
     },
     "serviceDescriptions": {
@@ -56,14 +56,14 @@
     "address": {
       "type": "string",
       "required": false,
-      "placeholder": "15/19 Wylie St, Toowoomba QLD 4350",
+      "placeholder": "St George, Queensland",
       "description": "Business address or service region"
     },
     "ctaText": {
       "type": "string",
       "required": false,
       "placeholder": "Request a Free Quote",
-      "default": "Request a Free Quote",
+      "default": "Book your appointment",
       "description": "Main call-to-action text"
     },
     "formEndpoint": {
@@ -82,25 +82,25 @@
       "type": "string",
       "required": false,
       "placeholder": "{{LICENSE_NUMBER}}",
-      "description": "Trade license number (e.g., Plumbing License #12345)"
+      "description": "Business license or registration number"
     },
     "insuranceProvider": {
       "type": "string",
       "required": false,
       "placeholder": "{{INSURANCE_PROVIDER}}",
-      "description": "Insurance provider name (e.g., AAMI, QBE)"
+      "description": "Insurance provider name (optional)"
     },
     "yearsExperience": {
       "type": "string",
       "required": false,
-      "placeholder": "over 30 years",
+      "placeholder": "15+ years",
       "description": "Years of experience (e.g., '20+' or '15')"
     },
     "operatingHours": {
       "type": "string",
       "required": false,
-      "placeholder": "Mon–Fri: 7 am–5 pm",
-      "description": "Operating hours (e.g., 'Mon-Fri: 7am-5pm, Sat: 8am-12pm' or '24/7 Available')"
+      "placeholder": "Call to book your appointment",
+      "description": "Operating hours (e.g., 'Mon-Fri: 9am-5pm, Sat: 9am-2pm' or 'By appointment')"
     },
     "socialFacebook": {
       "type": "string",
@@ -170,16 +170,15 @@
     }
   },
   "replacements": {
-    "Brendan Coonan Plumbing & Gasfitting": "businessName",
-    "Brendan Coonan Plumbing & Gasfitting": "businessName",
-    "Toowoomba & Darling Downs": "region",
-    "Toowoomba & Darling Downs": "region",
-    "0418 793 898": "phone",
+    "Amber's Hair Parlour": "businessName",
+    "St George, Queensland": "region",
+    "(07) 4625 1693": "phone",
     "{{EMAIL_ADDRESS}}": "email",
-    "Plumbing & Gas Fitting": "services[0]",
-    "Hot Water System Installations": "services[1]",
-    "Emergency Leak Repairs": "services[2]",
-    "15/19 Wylie St, Toowoomba QLD 4350": "address",
+    "Women's Cuts & Styling": "services[0]",
+    "Colour, Foils & Lightening": "services[1]",
+    "Men's Cuts": "services[2]",
+    "Special Occasion Hair": "services[3]",
+    "St George, Queensland": "address",
     "{{FORMSPREE_ENDPOINT}}": "formEndpoint",
     "{{ABN}}": "abn",
     "{{LICENSE_NUMBER}}": "licenseNumber",
@@ -209,17 +208,17 @@
     "{{TIP_EXCERPT_1}}": "tipExcerpt1",
     "{{PROJECT_SPOTLIGHT_TITLE}}": "projectSpotlightTitle",
     "{{PROJECT_SPOTLIGHT_EXCERPT}}": "projectSpotlightExcerpt",
-    "Request a Free Quote": "ctaText",
-    "#f97316": "colors.primary",
-    "#ea580c": "colors.primaryDark",
-    "#dc2626": "colors.secondary",
-    "#b91c1c": "colors.secondaryDark"
+    "Book your appointment": "ctaText",
+    "#d4a574": "colors.primary",
+    "#b8956a": "colors.primaryDark",
+    "#c08497": "colors.secondary",
+    "#a87085": "colors.secondaryDark"
   },
   "pages": [
     {
       "path": "/",
       "name": "Home",
-      "components": ["Header", "Hero", "WhyChooseUs", "Services", "Testimonials", "Gallery", "CTA", "Footer"]
+      "components": ["Header", "ExperienceCounter", "WhyChooseUs", "Services", "Testimonials", "Gallery", "CTA", "Footer"]
     },
     {
       "path": "/services",

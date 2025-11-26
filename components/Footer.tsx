@@ -8,14 +8,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
           {/* Business Info */}
           <div>
-            <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-primary">{"Brendan Coonan Plumbing & Gasfitting"}</h3>
+            <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-primary">{"Amber's Hair Parlour"}</h3>
             <p className="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4 leading-relaxed">
-              Professional trade services in {"Toowoomba & Darling Downs"}
+              Modern hairdressing for the St George community. Cuts, colours & styling inside a warm, boutique hair parlour.
             </p>
             <div className="flex flex-col space-y-2">
               <div className="flex items-start gap-2 text-sm sm:text-base text-gray-400">
                 <MapPinIcon className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                <span>{"15/19 Wylie St, Toowoomba QLD 4350"}</span>
+                <span>{"St George, Queensland"}</span>
               </div>
             </div>
           </div>
@@ -46,9 +46,10 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-3 sm:mb-4 text-white text-base sm:text-lg">Our Services</h4>
             <ul className="space-y-2 text-sm sm:text-base text-gray-400">
-              <li>{"Plumbing & Gas Fitting"}</li>
-              <li>{"Hot Water System Installations"}</li>
-              <li>{"Emergency Leak Repairs"}</li>
+              <li>{"Women's Cuts & Styling"}</li>
+              <li>{"Colour, Foils & Lightening"}</li>
+              <li>{"Men's Cuts"}</li>
+              <li>{"Special Occasion Hair"}</li>
             </ul>
           </div>
 
@@ -57,12 +58,12 @@ export default function Footer() {
             <h4 className="font-semibold mb-3 sm:mb-4 text-white text-base sm:text-lg">Contact Us</h4>
             <ul className="space-y-2 sm:space-y-3">
               <li>
-                <a
-                  href={`tel:0418 793 898`}
+                  <a
+                  href={`tel:0746251693`}
                   className="flex items-center gap-2 text-sm sm:text-base text-gray-400 hover:text-primary transition-colors touch-manipulation py-1"
                 >
                   <PhoneIcon className="w-5 h-5 flex-shrink-0" />
-                  <span>{"0418 793 898"}</span>
+                  <span>{"(07) 4625 1693"}</span>
                 </a>
               </li>
               {("{{EMAIL_ADDRESS}}" !== "{{EMAIL_ADDRESS}}") && (
@@ -81,7 +82,7 @@ export default function Footer() {
                   <ClockIcon className="w-5 h-5 flex-shrink-0 mt-0.5" />
                   <div className="flex flex-col">
                     <span className="font-medium text-gray-300 mb-1">Hours</span>
-                    <span className="leading-relaxed">{"{{OPERATING_HOURS}}"}</span>
+                    <span className="leading-relaxed">{"Call to book your appointment"}</span>
                   </div>
                 </div>
               </li>
@@ -91,7 +92,7 @@ export default function Footer() {
                 href="/contact"
                 className="inline-block px-6 py-2 bg-primary hover:bg-primary-dark text-white rounded-lg font-semibold transition-colors"
               >
-                Call now for a free quote!
+                Book your appointment
               </a>
             </div>
           </div>
@@ -142,15 +143,15 @@ export default function Footer() {
 
         {/* Legal Information */}
         <div className="pt-6 border-t border-gray-800 mb-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-gray-500">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-gray-500">
             <div>
-              <span className="font-medium text-gray-400">ABN:</span> {"{{ABN}}"}
+              <span className="font-medium text-gray-400">Location:</span> St George, Queensland
             </div>
             <div>
-              <span className="font-medium text-gray-400">License:</span> {"{{LICENSE_NUMBER}}"}
+              <span className="font-medium text-gray-400">Phone:</span> (07) 4625 1693
             </div>
             <div>
-              <span className="font-medium text-gray-400">Insured:</span> {"{{INSURANCE_PROVIDER}}"}
+              <span className="font-medium text-gray-400">Services:</span> Cuts, Colour & Styling
             </div>
           </div>
         </div>
@@ -159,7 +160,7 @@ export default function Footer() {
         <div className="pt-6 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm text-center md:text-left">
-              © {new Date().getFullYear()} {"Brendan Coonan Plumbing & Gasfitting"}. All rights reserved.
+              © {new Date().getFullYear()} {"Amber's Hair Parlour"}. All rights reserved.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs sm:text-sm text-gray-500">
               <Link href="/privacy" className="hover:text-primary transition-colors">
@@ -170,13 +171,9 @@ export default function Footer() {
                 Terms of Service
               </Link>
               <span>•</span>
-              <span>Licensed</span>
+              <span>Experienced Stylists</span>
               <span>•</span>
-              <span>Insured</span>
-              <>
-                <span>•</span>
-                <span>{"{{YEARS_EXPERIENCE}}"} Years Experience</span>
-              </>
+              <span>Boutique Salon</span>
             </div>
           </div>
         </div>

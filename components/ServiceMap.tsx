@@ -24,9 +24,9 @@ const createDefaultIcon = () => {
 };
 
 export default function ServiceMap({
-  center = [-27.5598, 151.9507], // Toowoomba, Queensland
+  center = [-28.0369, 148.5811], // St George, Queensland
   zoom = 12,
-  region = "Toowoomba & Darling Downs",
+  region = "St George, Queensland",
   suburbs = [],
 }: ServiceMapProps) {
   const mapRef = useRef<L.Map | null>(null);

@@ -3,68 +3,68 @@
 import { motion } from "framer-motion";
 import ServiceCard from "./ServiceCard";
 import {
-  WrenchScrewdriverIcon,
-  BoltIcon,
-  HomeIcon,
-  CogIcon,
+  ScissorsIcon,
+  SparklesIcon,
+  UserIcon,
+  HeartIcon,
 } from "@heroicons/react/24/solid";
 
 export default function ServicesPage() {
   const services = [
     {
-      title: "Plumbing & Gas Fitting",
-      description: "Expert plumbing and gas fitting services for homeowners, landlords, real estate agents, and commercial clients. From minor repairs to major installations, we provide fully licensed workmanship with fast turnaround times and a strong focus on safety, reliability, and customer care.",
-      icon: WrenchScrewdriverIcon,
+      title: "Women's Cuts & Styling",
+      description: "Expert haircuts and styling tailored to your face shape, hair type, and lifestyle. From classic bobs and layers to modern shags and pixie cuts, we create looks that enhance your natural beauty and suit your personal style. Our experienced stylists take time to understand what you want and provide personalised recommendations.",
+      icon: ScissorsIcon,
       bulletPoints: [
-        "Burst pipes, leaks, and emergency repairs",
-        "New plumbing installations for renovations",
-        "Gas appliance installation & servicing",
-        "Toilet, tap, and fixture repairs",
-        "Blocked drains and drain diagnostics",
-        "Water pressure issues & pipe replacements",
-        "Compliance checks for plumbing & gas systems",
+        "Precision cuts for all hair types",
+        "Layered cuts and texturising",
+        "Blunt cuts and one-length styles",
+        "Dry cutting and wet cutting techniques",
+        "Styling and blow-drying",
+        "Hair consultations and style advice",
+        "Maintenance trims and shape-ups",
       ],
     },
     {
-      title: "Hot Water System Installations & Repairs",
-      description: "Professional hot water system installations and repairs for electric, gas, solar, and heat pump systems. We diagnose issues quickly and provide honest advice to keep your hot water running safely and efficiently.",
-      icon: BoltIcon,
+      title: "Colour, Foils & Lightening",
+      description: "Transform your hair with professional colour services. Whether you want subtle highlights, bold balayage, full colour coverage, or a complete colour correction, we use premium products and modern techniques to achieve beautiful, long-lasting results. Specialising in blonding, foils, and creative colour work.",
+      icon: SparklesIcon,
       bulletPoints: [
-        "New system installations (all major brands)",
-        "Fast repair service for no-hot-water issues",
-        "Hot water tank replacements",
-        "Thermostat & element repairs",
-        "Gas hot water troubleshooting",
-        "Safety checks and system servicing",
-        "Advice on energy-efficient water heating",
+        "Full head colour and root touch-ups",
+        "Highlights and lowlights",
+        "Balayage and ombré techniques",
+        "Foils (partial and full head)",
+        "Blonding and lightening services",
+        "Colour correction and transformations",
+        "Toner and gloss treatments",
       ],
     },
     {
-      title: "Emergency Leak Repairs (24/7 Call-Out)",
-      description: "Reliable 24/7 emergency plumbing support for urgent leak repairs, burst pipes, and water system failures. We respond quickly to minimise damage and restore function as fast as possible — day or night.",
-      icon: HomeIcon,
+      title: "Men's Cuts",
+      description: "Classic and contemporary men's haircuts in a welcoming, boutique atmosphere. From traditional short back and sides to modern fades, textured crops, and longer styles, we provide precision cuts that suit your face shape and lifestyle. Walk-ins welcome, appointments preferred.",
+      icon: UserIcon,
       bulletPoints: [
-        "Burst pipe isolation & repairs",
-        "Leak detection",
-        "Blocked drains & overflowing fixtures",
-        "Gas leak response (licensed repair)",
-        "After-hours emergency call-outs",
-        "Temporary fixes & permanent repairs",
-        "Fast arrival times across Toowoomba & region",
+        "Classic short back and sides",
+        "Modern fades and tapers",
+        "Textured crops and scissor cuts",
+        "Longer men's styles",
+        "Beard trims and styling",
+        "Clipper and scissor work",
+        "Style consultations",
       ],
     },
     {
-      title: "Custom Jobs & General Plumbing Help",
-      description: "Need something specific or not sure what service you need? We handle custom plumbing projects, general maintenance, and provide expert advice for all your plumbing and gasfitting needs.",
-      icon: CogIcon,
+      title: "Special Occasion Hair",
+      description: "Perfect styling for your special moments. Whether it's a formal, wedding, birthday celebration, or any event where you want to look and feel your best, we create elegant updos, soft curls, sleek styles, and everything in between. Book ahead to ensure your preferred time slot.",
+      icon: HeartIcon,
       bulletPoints: [
-        "Custom plumbing solutions",
-        "General maintenance & servicing",
-        "Plumbing consultations & advice",
-        "Renovation plumbing planning",
-        "Fixture upgrades & replacements",
-        "Water efficiency improvements",
-        "Commercial plumbing services",
+        "Wedding hair styling",
+        "Formal and prom updos",
+        "Bridal party styling",
+        "Special event curls and waves",
+        "Elegant chignons and buns",
+        "Half-up, half-down styles",
+        "Hair accessories and finishing touches",
       ],
     },
   ];
@@ -80,9 +80,9 @@ export default function ServicesPage() {
           transition={{duration: 0.6}}
           className="text-center mb-12 md:mb-20"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 px-4">Our Plumbing & Gas Services</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 px-4">Our Hairdressing Services</h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto px-4 leading-relaxed">
-            Comprehensive, reliable, and fully licensed trade services for homes and businesses across Toowoomba & Darling Downs.
+            Whether you're after a fresh cut, a full colour transformation, or something special for an event, Amber's Hair Parlour offers personalised styling for all hair types.
           </p>
         </motion.div>
 
@@ -95,10 +95,10 @@ export default function ServicesPage() {
           className="max-w-[820px] mx-auto mb-12 md:mb-20 px-6"
         >
           <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed font-medium">
-            At <span className="text-primary font-semibold">Brendan Coonan Plumbing & Gasfitting</span>, we provide a complete range of residential and commercial plumbing solutions backed by <span className="text-primary font-semibold">over 30 years</span> of hands-on experience. Whether it's repairing a burst pipe, installing a new hot water system, or responding to an urgent after-hours call-out, our team delivers fast, reliable workmanship you can trust.
+            At <span className="text-primary font-semibold">Amber's Hair Parlour</span>, we're a long-standing local hairdresser in St George, known for friendly service and personalised care. Our boutique salon offers a welcoming atmosphere where skilled stylists specialise in colour, blonding, and modern cuts. Whether you're after a fresh cut, a full colour transformation, or something special for an event, we create looks that make you feel beautiful and confident.
           </p>
           <p className="text-base sm:text-lg text-gray-300 leading-relaxed mt-4">
-            All services are performed by <span className="text-white font-semibold">licensed and insured tradespeople</span>, using quality parts and proven techniques to ensure long-lasting results.
+            All services are performed by <span className="text-white font-semibold">experienced stylists</span>, using premium products and modern techniques to ensure beautiful, long-lasting results.
           </p>
         </motion.div>
 

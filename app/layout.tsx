@@ -8,9 +8,9 @@ import StickyCTA from "@/components/StickyCTA";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "Brendan Coonan Plumbing & Gasfitting | 24/7 Trade Services in Toowoomba & Darling Downs",
-  description: "Brendan Coonan Plumbing & Gasfitting provides professional trade services in Toowoomba & Darling Downs. Licensed, insured, and available 24/7. Contact us at 0418 793 898 for a free quote.",
-  keywords: "Plumbing & Gas Fitting, Hot Water System Installations, Emergency Leak Repairs, Toowoomba & Darling Downs, trade services, licensed tradesperson",
+  title: "Amber's Hair Parlour | Modern Hairdressing in St George, Queensland",
+  description: "Amber's Hair Parlour offers modern hairdressing services in St George, Queensland. Cuts, colours, foils & styling in a warm, boutique hair parlour. Book your appointment at (07) 4625 1693.",
+  keywords: "hairdressing, hair salon, haircuts, hair colour, foils, styling, St George Queensland, ladies hair, men's cuts, special occasion hair",
 };
 
 export default function RootLayout({

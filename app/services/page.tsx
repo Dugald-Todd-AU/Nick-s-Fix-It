@@ -8,7 +8,7 @@ export default function Services() {
     <main className="min-h-screen">
       <ServicesPage />
       <MapOrRegionList />
-      <GalleryGrid title="Completed Jobs Photos" subtitle="Real projects we've completed for customers in Toowoomba & Darling Downs" />
+      <GalleryGrid title="Our Work" subtitle="Hair transformations and styling at Amber's Hair Parlour" />
       <CTA />
     </main>
   );

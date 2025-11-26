@@ -35,15 +35,15 @@ export default function ContactHero() {
             <span className="text-primary">Contact Us</span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto px-4 leading-relaxed">
-            Get in touch for a free quote or emergency service in {"Toowoomba & Darling Downs"}
+            Book your appointment or get in touch with Amber's Hair Parlour in St George, Queensland
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center px-4 w-full sm:w-auto">
             <a
-              href={`tel:0418 793 898`}
+              href={`tel:0746251693`}
               className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-primary hover:bg-primary-dark active:bg-primary-dark text-white rounded-lg font-semibold text-base sm:text-lg transition-all active:scale-95 shadow-lg touch-manipulation min-h-[48px] w-full sm:w-auto"
             >
               <PhoneIcon className="w-5 h-5 flex-shrink-0" />
-              <span>{"0418 793 898"}</span>
+              <span>{"(07) 4625 1693"}</span>
             </a>
             {("{{EMAIL_ADDRESS}}" !== "{{EMAIL_ADDRESS}}") && (
               <a

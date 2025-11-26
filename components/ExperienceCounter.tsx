@@ -10,8 +10,8 @@ interface ExperienceCounterProps {
 }
 
 export default function ExperienceCounter({
-  years = 28,
-  region = "Toowoomba & Darling Downs",
+  years = 15,
+  region = "St George, Queensland",
 }: ExperienceCounterProps) {
   const [count, setCount] = useState(0);
   const [isMounted, setIsMounted] = useState(false);
@@ -102,8 +102,8 @@ export default function ExperienceCounter({
               <span className="text-primary font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl drop-shadow-2xl inline-block">
                 {count} Years
               </span>{" "}
-              <span className="text-white font-bold">Of Trusted</span>{" "}
-              <span className="text-white font-bold">Plumbing & Gasfitting In</span>{" "}
+              <span className="text-white font-bold">Of Modern</span>{" "}
+              <span className="text-white font-bold">Hairdressing In</span>{" "}
               <span className="text-primary font-black drop-shadow-2xl">{region}</span>
             </p>
           </div>
@@ -118,24 +118,24 @@ export default function ExperienceCounter({
               <span className="text-primary font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl drop-shadow-2xl inline-block">
                 {count} Years
               </span>{" "}
-              <span className="text-white font-bold">Of Trusted</span>{" "}
-              <span className="text-white font-bold">Plumbing & Gasfitting In</span>{" "}
+              <span className="text-white font-bold">Of Modern</span>{" "}
+              <span className="text-white font-bold">Hairdressing In</span>{" "}
               <span className="text-primary font-black drop-shadow-2xl">{region}</span>
             </p>
           </div>
 
           {/* Desktop Only Section */}
           <p className="hidden md:block text-sm sm:text-base md:text-base lg:text-lg text-gray-100 mb-8 sm:mb-10 md:mb-12 leading-relaxed max-w-4xl mx-auto font-semibold px-4">
-            Licensed, insured, and reliable local professionals with fast response times and quality workmanship.
+            Modern hairdressing for the St George community. Cuts, colours & styling inside a warm, boutique hair parlour.
           </p>
 
           {/* Service Highlights - Enhanced for Hero - Hidden on Desktop */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto px-4 md:hidden">
             {[
-              "Licensed & Qualified Professionals",
-              "24/7 Emergency Service Available",
-              "Fast Response Times",
-              "Quality Workmanship Guaranteed",
+              "Experienced Stylists",
+              "Personalised Service",
+              "Modern Techniques",
+              "Boutique Salon Experience",
             ].map((feature, index) => (
               <motion.div
                 key={index}

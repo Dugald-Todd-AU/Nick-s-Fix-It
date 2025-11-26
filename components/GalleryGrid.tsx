@@ -12,15 +12,15 @@ interface GalleryGridProps {
 export default function GalleryGrid({
   images,
   title = "Our Work",
-  subtitle = "Featured projects and completed jobs",
+  subtitle = "Hair transformations and styling at Amber's Hair Parlour",
 }: GalleryGridProps) {
   // Placeholder images - in production these would come from props or CMS
   const defaultImages = Array.from({ length: 6 }, (_, i) => ({
     id: i + 1,
     src: `https://images.unsplash.com/photo-${1500000000000 + i}?w=800&h=600&fit=crop`,
-    alt: `Project ${i + 1}`,
-    name: `{{PROJECT_${i + 1}_NAME}}`,
-    suburb: `{{PROJECT_${i + 1}_SUBURB}}`,
+    alt: `Hair styling example ${i + 1} - Haircut, colour, or styling at Amber's Hair Parlour`,
+    name: `Hair Transformation ${i + 1}`,
+    suburb: `St George, QLD`,
   }));
 
   const galleryImages = images || defaultImages;
@@ -104,7 +104,7 @@ export default function GalleryGrid({
           >
             {galleryImages.map((image, index) => {
               const imageData = typeof image === "string" 
-                ? { id: index, alt: `Image ${index + 1}`, name: `{{PROJECT_${index + 1}_NAME}}`, suburb: `{{PROJECT_${index + 1}_SUBURB}}` }
+                ? { id: index, alt: `Hair styling example ${index + 1}`, name: `Hair Transformation ${index + 1}`, suburb: `St George, QLD` }
                 : image;
               
               return (
@@ -123,10 +123,10 @@ export default function GalleryGrid({
                   </div>
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/40 transition-all duration-200 flex flex-col items-center justify-center p-4">
                     <span className="opacity-0 group-hover:opacity-100 text-white font-semibold text-lg mb-1 transition-opacity text-center">
-                      {imageData.name || "{{PROJECT_1_NAME}}"}
+                      {imageData.name || "Hair Transformation"}
                     </span>
                     <span className="opacity-0 group-hover:opacity-100 text-white/90 text-sm transition-opacity text-center">
-                      {imageData.suburb || "{{PROJECT_1_SUBURB}}"}
+                      {imageData.suburb || "St George, QLD"}
                     </span>
                   </div>
                 </motion.div>
@@ -153,7 +153,7 @@ export default function GalleryGrid({
         <div className="hidden lg:grid lg:grid-cols-3 gap-6">
           {galleryImages.map((image, index) => {
             const imageData = typeof image === "string" 
-              ? { id: index, alt: `Image ${index + 1}`, name: `{{PROJECT_${index + 1}_NAME}}`, suburb: `{{PROJECT_${index + 1}_SUBURB}}` }
+              ? { id: index, alt: `Hair styling example ${index + 1}`, name: `Hair Transformation ${index + 1}`, suburb: `St George, QLD` }
               : image;
             
             return (

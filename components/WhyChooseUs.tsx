@@ -2,33 +2,33 @@
 
 import { motion } from "framer-motion";
 import {
-  ShieldCheckIcon,
-  ClockIcon,
+  HeartIcon,
+  SparklesIcon,
   MapPinIcon,
-  CheckBadgeIcon,
+  UserGroupIcon,
 } from "@heroicons/react/24/solid";
 
 export default function WhyChooseUs() {
   const features = [
     {
-      icon: ShieldCheckIcon,
-      title: "Licensed & Insured",
-      description: "Fully licensed professionals with comprehensive insurance coverage",
+      icon: HeartIcon,
+      title: "Experienced Stylists",
+      description: "Skilled hairdressers with expertise in colour, blonding, and modern cuts",
     },
     {
-      icon: ClockIcon,
-      title: "24/7 Emergency Service",
-      description: "Round-the-clock availability for urgent call-outs",
+      icon: SparklesIcon,
+      title: "Personalised Service",
+      description: "Friendly, boutique salon experience tailored to your individual style",
     },
     {
       icon: MapPinIcon,
-      title: "Local & Trusted",
-      description: `Serving Toowoomba & Darling Downs with local expertise and reliability`,
+      title: "Local & Community-Driven",
+      description: `A long-standing local business serving St George with warmth and care`,
     },
     {
-      icon: CheckBadgeIcon,
-      title: "Fast Response",
-      description: "Quick response times and efficient service delivery",
+      icon: UserGroupIcon,
+      title: "Modern Techniques",
+      description: "Premium products and contemporary styling methods for beautiful results",
     },
   ];
 
@@ -44,7 +44,7 @@ export default function WhyChooseUs() {
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 px-4">Why Choose Us</h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-            Trusted trade professionals serving {"Toowoomba & Darling Downs"}
+            A warm, boutique hair parlour serving the St George community with personalised care and modern hairdressing
           </p>
         </motion.div>
 
