@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import ServiceCard from "./ServiceCard";
 import {
   ScissorsIcon,
@@ -13,35 +14,34 @@ export default function ServicesPage() {
   const services = [
     {
       title: "Women's Cuts & Styling",
-      description: "Expert haircuts and styling tailored to your face shape, hair type, and lifestyle. From classic bobs and layers to modern shags and pixie cuts, we create looks that enhance your natural beauty and suit your personal style. Our experienced stylists take time to understand what you want and provide personalised recommendations.",
+      description: "Expert haircuts and styling tailored to you. From classic bobs to modern shags, we create looks that enhance your natural beauty.",
       icon: ScissorsIcon,
       bulletPoints: [
         "Precision cuts for all hair types",
         "Layered cuts and texturising",
         "Blunt cuts and one-length styles",
-        "Dry cutting and wet cutting techniques",
         "Styling and blow-drying",
-        "Hair consultations and style advice",
-        "Maintenance trims and shape-ups",
+        "Hair consultations",
+        "Maintenance trims",
       ],
     },
     {
       title: "Colour, Foils & Lightening",
-      description: "Transform your hair with professional colour services. Whether you want subtle highlights, bold balayage, full colour coverage, or a complete colour correction, we use premium products and modern techniques to achieve beautiful, long-lasting results. Specialising in blonding, foils, and creative colour work.",
+      description: "Professional colour services using premium products. Specialising in blonding, foils, and creative colour work.",
       icon: SparklesIcon,
       bulletPoints: [
         "Full head colour and root touch-ups",
         "Highlights and lowlights",
-        "Balayage and ombré techniques",
+        "Balayage and ombré",
         "Foils (partial and full head)",
-        "Blonding and lightening services",
-        "Colour correction and transformations",
+        "Blonding and lightening",
+        "Colour correction",
         "Toner and gloss treatments",
       ],
     },
     {
       title: "Men's Cuts",
-      description: "Classic and contemporary men's haircuts in a welcoming, boutique atmosphere. From traditional short back and sides to modern fades, textured crops, and longer styles, we provide precision cuts that suit your face shape and lifestyle. Walk-ins welcome, appointments preferred.",
+      description: "Classic and contemporary men's haircuts in a welcoming, boutique atmosphere. Walk-ins welcome, appointments preferred.",
       icon: UserIcon,
       bulletPoints: [
         "Classic short back and sides",
@@ -49,13 +49,12 @@ export default function ServicesPage() {
         "Textured crops and scissor cuts",
         "Longer men's styles",
         "Beard trims and styling",
-        "Clipper and scissor work",
         "Style consultations",
       ],
     },
     {
       title: "Special Occasion Hair",
-      description: "Perfect styling for your special moments. Whether it's a formal, wedding, birthday celebration, or any event where you want to look and feel your best, we create elegant updos, soft curls, sleek styles, and everything in between. Book ahead to ensure your preferred time slot.",
+      description: "Perfect styling for your special moments. Elegant updos, soft curls, and sleek styles. Book ahead to secure your preferred time.",
       icon: HeartIcon,
       bulletPoints: [
         "Wedding hair styling",
@@ -64,41 +63,60 @@ export default function ServicesPage() {
         "Special event curls and waves",
         "Elegant chignons and buns",
         "Half-up, half-down styles",
-        "Hair accessories and finishing touches",
       ],
     },
   ];
 
   return (
-    <section className="pt-12 md:pt-20 pb-12 md:pb-20 bg-black">
-      <div className="container-custom">
-        {/* Title Block */}
-        <motion.div
-          initial={{opacity: 0, y: 20}}
-          whileInView={{opacity: 1, y: 0}}
-          viewport={{once: true}}
-          transition={{duration: 0.6}}
-          className="text-center mb-12 md:mb-20"
-        >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 px-4">Our Hairdressing Services</h1>
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto px-4 leading-relaxed">
-            Whether you're after a fresh cut, a full colour transformation, or something special for an event, Amber's Hair Parlour offers personalised styling for all hair types.
-          </p>
-        </motion.div>
+    <>
+      {/* Full-width Hero Section with Background Image */}
+      <section className="relative min-h-[85vh] sm:min-h-screen flex items-center py-12 sm:py-16 md:py-20 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/Servcies BG.jpg"
+            alt="Services Background"
+            fill
+            className="object-cover grayscale"
+            priority
+            quality={90}
+          />
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="container-custom relative z-10 w-full">
+          <motion.div
+            initial={{opacity: 0, y: 20}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 0.8, ease: "easeOut"}}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 px-4">
+              <span className="text-white">Our Hairdressing Services</span>
+            </h1>
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-100 max-w-2xl mx-auto px-4 leading-relaxed drop-shadow-lg">
+              Cuts, colour and styling tailored to you.
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
-        {/* Hero Intro Paragraph */}
+      {/* Services Content Section */}
+      <section className="pt-12 md:pt-20 pb-12 md:pb-20 bg-gray-800">
+        <div className="container-custom">
+
+        {/* Intro Paragraph */}
         <motion.div
           initial={{opacity: 0, y: 20}}
           whileInView={{opacity: 1, y: 0}}
           viewport={{once: true}}
           transition={{duration: 0.6, delay: 0.1}}
-          className="max-w-[820px] mx-auto mb-12 md:mb-20 px-6"
+          className="max-w-3xl mx-auto mb-12 md:mb-16 px-6 text-center"
         >
-          <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed font-medium">
-            At <span className="text-primary font-semibold">Amber's Hair Parlour</span>, we're a long-standing local hairdresser in St George, known for friendly service and personalised care. Our boutique salon offers a welcoming atmosphere where skilled stylists specialise in colour, blonding, and modern cuts. Whether you're after a fresh cut, a full colour transformation, or something special for an event, we create looks that make you feel beautiful and confident.
-          </p>
-          <p className="text-base sm:text-lg text-gray-300 leading-relaxed mt-4">
-            All services are performed by <span className="text-white font-semibold">experienced stylists</span>, using premium products and modern techniques to ensure beautiful, long-lasting results.
+          <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed">
+            At <span className="text-primary font-semibold">Amber's Hair Parlour</span>, we offer friendly, personalised hairdressing for the St George community. Our stylists specialise in modern cuts, blondes and colour work. Every service is performed with quality products and professional care.
           </p>
         </motion.div>
 
@@ -119,6 +137,7 @@ export default function ServicesPage() {
         </div>
       </div>
     </section>
+    </>
   );
 }
 

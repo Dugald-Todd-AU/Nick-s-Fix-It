@@ -11,14 +11,14 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-black/95 backdrop-blur-sm border-b border-black/20">
       <div className="container-custom">
-        <div className="flex items-center justify-between h-14 sm:h-16 md:h-20">
+        <div className="flex items-center justify-between h-12 sm:h-14 md:h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center min-w-0 flex-1 sm:flex-initial" aria-label="Home">
+          <Link href="/" className="flex items-center min-w-0 flex-shrink-0" aria-label="Home">
             <Logo />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6">
             <Link
               href="/"
               className="text-gray-300 hover:text-primary transition-colors font-medium"
@@ -40,33 +40,33 @@ export default function Header() {
           </nav>
 
           {/* Phone CTA */}
-          <div className="flex items-center gap-2 sm:gap-4">
+          <div className="flex items-center gap-2 sm:gap-3">
             <a
               href={`tel:0746251693`}
-              className="hidden sm:flex items-center gap-2 px-3 sm:px-4 py-2 bg-primary hover:bg-primary-dark active:bg-primary-dark text-white rounded-lg font-semibold text-sm sm:text-base transition-colors touch-manipulation"
+              className="hidden sm:flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 sm:py-2 bg-primary hover:bg-primary-dark active:bg-primary-dark text-white rounded-lg font-semibold text-xs sm:text-sm transition-colors touch-manipulation"
             >
-              <PhoneIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+              <PhoneIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               <span className="hidden md:inline">{"(07) 4625 1693"}</span>
             </a>
             <a
               href={`tel:0746251693`}
-              className="sm:hidden flex items-center justify-center w-11 h-11 min-w-[44px] min-h-[44px] bg-primary hover:bg-primary-dark active:bg-primary-dark text-white rounded-lg transition-colors touch-manipulation"
+              className="sm:hidden flex items-center justify-center w-10 h-10 min-w-[40px] min-h-[40px] bg-primary hover:bg-primary-dark active:bg-primary-dark text-white rounded-lg transition-colors touch-manipulation"
               aria-label="Call (07) 4625 1693"
             >
-              <PhoneIcon className="w-5 h-5" />
+              <PhoneIcon className="w-4 h-4" />
             </a>
 
             {/* Mobile menu button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center text-gray-300 hover:text-white active:text-white touch-manipulation"
+              className="md:hidden p-2 min-w-[40px] min-h-[40px] flex items-center justify-center text-gray-300 hover:text-white active:text-white touch-manipulation"
               aria-label="Toggle menu"
               aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? (
-                <XMarkIcon className="w-6 h-6" />
+                <XMarkIcon className="w-5 h-5" />
               ) : (
-                <Bars3Icon className="w-6 h-6" />
+                <Bars3Icon className="w-5 h-5" />
               )}
             </button>
           </div>

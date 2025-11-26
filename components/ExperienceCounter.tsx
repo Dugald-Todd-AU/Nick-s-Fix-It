@@ -1,155 +1,60 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { CheckCircleIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
 
-interface ExperienceCounterProps {
-  years?: number;
-  region?: string;
-}
-
-export default function ExperienceCounter({
-  years = 15,
-  region = "St George, Queensland",
-}: ExperienceCounterProps) {
-  const [count, setCount] = useState(0);
-  const [isMounted, setIsMounted] = useState(false);
-  const hasAnimatedRef = useRef(false);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
-  const ref = useRef<HTMLDivElement>(null);
-
-  // Ensure component is mounted on client
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  // Use IntersectionObserver directly for better mobile compatibility
-  useEffect(() => {
-    if (!isMounted || !ref.current) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !hasAnimatedRef.current) {
-            hasAnimatedRef.current = true;
-
-            // Clear any existing timer
-            if (timerRef.current) {
-              clearInterval(timerRef.current);
-            }
-
-            // Reset count to 0 for animation
-            setCount(0);
-
-            // Animate counter with smooth easing
-            const duration = 2000; // 2 seconds
-            const steps = 60;
-            const increment = years / steps;
-            let current = 0;
-
-            timerRef.current = setInterval(() => {
-              current += increment;
-              if (current >= years) {
-                setCount(years);
-                if (timerRef.current) {
-                  clearInterval(timerRef.current);
-                  timerRef.current = null;
-                }
-              } else {
-                setCount(Math.floor(current));
-              }
-            }, duration / steps);
-          }
-        });
-      },
-      { threshold: 0.3, rootMargin: "0px" }
-    );
-
-    observer.observe(ref.current);
-
-    return () => {
-      if (timerRef.current) {
-        clearInterval(timerRef.current);
-      }
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
-    };
-  }, [isMounted, years]);
-
+export default function ExperienceCounter() {
   return (
-    <section className="relative min-h-[85vh] sm:min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-black py-12 sm:py-16 md:py-20 overflow-hidden">
-      {/* Enhanced background effects for hero prominence */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-black/30 pointer-events-none"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(249,115,22,0.1),transparent_70%)] pointer-events-none"></div>
+    <section className="relative min-h-[85vh] sm:min-h-screen flex items-center py-12 sm:py-16 md:py-20 overflow-hidden">
+      {/* Background Image - Mobile */}
+      <div className="absolute inset-0 z-0 md:hidden">
+        <Image
+          src="/MB BG.png"
+          alt="AMBER"
+          fill
+          className="object-cover"
+          priority
+          quality={90}
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/50"></div>
+      </div>
       
-      <div className="container-custom relative z-10">
+      {/* Background Image - Desktop */}
+      <div className="absolute inset-0 z-0 hidden md:block">
+        <Image
+          src="/AMBER.png"
+          alt="AMBER"
+          fill
+          className="object-cover"
+          priority
+          quality={90}
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/50"></div>
+      </div>
+      
+      {/* Subtle gradient from bottom for legibility */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none z-[1]"></div>
+      
+      <div className="container-custom relative z-10 w-full flex flex-col items-center justify-end pb-12 sm:pb-16 md:pb-20 min-h-[85vh] sm:min-h-screen">
         <motion.div
-          ref={ref}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-5xl mx-auto text-center"
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center max-w-3xl mx-auto px-4"
         >
-          {/* Counter - Prominent Hero Text - Desktop Only */}
-          <div className="mb-6 sm:mb-8 md:mb-10 hidden md:block">
-            <p 
-              className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl max-w-5xl mx-auto px-4 leading-tight sm:leading-snug font-bold"
-              aria-live="polite"
-              aria-atomic="true"
-            >
-              <span className="text-primary font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl drop-shadow-2xl inline-block">
-                {count} Years
-              </span>{" "}
-              <span className="text-white font-bold">Of Modern</span>{" "}
-              <span className="text-white font-bold">Hairdressing In</span>{" "}
-              <span className="text-primary font-black drop-shadow-2xl">{region}</span>
-            </p>
-          </div>
+          {/* Main Headline */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-5 md:mb-6 leading-tight">
+            <span className="text-white drop-shadow-lg">Modern Hairdressing</span>
+            <br />
+            <span className="text-primary drop-shadow-lg">in St George</span>
+          </h1>
 
-          {/* Mobile Counter Text */}
-          <div className="mb-6 sm:mb-8 md:mb-10 md:hidden">
-            <p 
-              className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl max-w-5xl mx-auto px-4 leading-tight sm:leading-snug font-bold"
-              aria-live="polite"
-              aria-atomic="true"
-            >
-              <span className="text-primary font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl drop-shadow-2xl inline-block">
-                {count} Years
-              </span>{" "}
-              <span className="text-white font-bold">Of Modern</span>{" "}
-              <span className="text-white font-bold">Hairdressing In</span>{" "}
-              <span className="text-primary font-black drop-shadow-2xl">{region}</span>
-            </p>
-          </div>
-
-          {/* Desktop Only Section */}
-          <p className="hidden md:block text-sm sm:text-base md:text-base lg:text-lg text-gray-100 mb-8 sm:mb-10 md:mb-12 leading-relaxed max-w-4xl mx-auto font-semibold px-4">
-            Modern hairdressing for the St George community. Cuts, colours & styling inside a warm, boutique hair parlour.
+          {/* Subheadline */}
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-100 leading-relaxed font-light drop-shadow-md">
+            Cuts, colour and styling inside a warm, boutique parlour.
           </p>
-
-          {/* Service Highlights - Enhanced for Hero - Hidden on Desktop */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto px-4 md:hidden">
-            {[
-              "Experienced Stylists",
-              "Personalised Service",
-              "Modern Techniques",
-              "Boutique Salon Experience",
-            ].map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                className="grid grid-cols-[auto_1fr] gap-3 items-start bg-gray-800/50 backdrop-blur-sm px-4 py-3 rounded-lg border border-gray-700/50"
-              >
-                <CheckCircleIcon className="w-6 h-6 sm:w-7 sm:h-7 text-primary drop-shadow-lg flex-shrink-0" />
-                <span className="text-base sm:text-lg md:text-xl text-gray-100 font-semibold leading-tight">{feature}</span>
-              </motion.div>
-            ))}
-          </div>
-
         </motion.div>
       </div>
     </section>

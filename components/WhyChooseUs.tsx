@@ -33,7 +33,7 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="py-12 md:py-20 bg-gray-800">
+    <section className="hidden md:block py-12 md:py-20 bg-gray-800">
       <div className="container-custom">
         <motion.div
           initial={{opacity: 0, y: 20}}
