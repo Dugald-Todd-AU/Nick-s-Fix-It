@@ -37,7 +37,7 @@ export default function ExperienceCounter() {
       {/* Subtle gradient from bottom for legibility - Desktop only */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none z-[1] hidden md:block"></div>
       
-      <div className="relative z-10 w-full flex flex-col items-center md:items-start justify-start md:justify-end pt-[43px] pb-16 md:pt-0 md:pb-20 min-h-[85vh] sm:min-h-screen md:min-h-[68.75vh] px-4 sm:px-6 md:pr-6 md:pl-8 lg:pr-8 lg:pl-[2.7rem] md:max-w-none">
+      <div className="relative z-10 w-full flex flex-col items-center md:items-start justify-start md:justify-end pt-[34px] pb-16 md:pt-0 md:pb-20 min-h-[85vh] sm:min-h-screen md:min-h-[68.75vh] px-4 sm:px-6 md:pr-6 md:pl-8 lg:pr-8 lg:pl-[2.7rem] md:max-w-none">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
