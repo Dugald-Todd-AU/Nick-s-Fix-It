@@ -10,10 +10,6 @@ const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   swcMinify: true,
-  // Performance optimizations
-  experimental: {
-    optimizeCss: true,
-  },
   // Reduce bundle size
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
