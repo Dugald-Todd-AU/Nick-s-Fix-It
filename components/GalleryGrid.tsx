@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import Image from "next/image";
 
 interface GalleryGridProps {
@@ -40,7 +40,7 @@ export default function GalleryGrid({
     },
   ];
 
-  const galleryImages = images || defaultImages;
+  const galleryImages = useMemo(() => images || defaultImages, [images]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -84,11 +84,12 @@ export default function GalleryGrid({
     }
   }, [currentIndex, isMobile]);
 
-  const handleMouseEnter = () => setIsPaused(true);
-  const handleMouseLeave = () => setIsPaused(false);
+  const handleMouseEnter = useCallback(() => setIsPaused(true), []);
+  const handleMouseLeave = useCallback(() => setIsPaused(false), []);
+  const handleIndicatorClick = useCallback((index: number) => setCurrentIndex(index), []);
 
   return (
-    <section className="py-12 md:py-20 bg-black">
+    <section className="py-12 md:py-12 lg:py-16 bg-gray-800">
       <div className="container-custom">
         {(title || subtitle) && (
           <motion.div
@@ -96,13 +97,13 @@ export default function GalleryGrid({
             whileInView={{opacity: 1, y: 0}}
             viewport={{once: true}}
             transition={{duration: 0.6}}
-            className="text-center mb-12"
+            className="text-center mb-8 md:mb-8"
           >
             {title && (
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 px-4">{title}</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 md:mb-3 px-4">{title}</h2>
             )}
             {subtitle && (
-              <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto px-4">{subtitle}</p>
+              <p className="text-base sm:text-lg md:text-lg text-gray-300 max-w-2xl mx-auto px-4">{subtitle}</p>
             )}
           </motion.div>
         )}
@@ -139,6 +140,8 @@ export default function GalleryGrid({
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 85vw, 33vw"
+                    loading={index === 0 ? "eager" : "lazy"}
+                    quality={85}
                   />
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/40 transition-all duration-200 flex flex-col items-center justify-center p-4">
                     <span className="opacity-0 group-hover:opacity-100 text-white font-semibold text-lg mb-1 transition-opacity text-center">
@@ -158,7 +161,7 @@ export default function GalleryGrid({
             {galleryImages.map((_, index) => (
               <button
                 key={index}
-                onClick={() => setCurrentIndex(index)}
+                onClick={() => handleIndicatorClick(index)}
                 className={`h-2 rounded-full transition-all ${
                   index === currentIndex ? "w-8 bg-primary" : "w-2 bg-gray-600"
                 }`}
@@ -169,7 +172,7 @@ export default function GalleryGrid({
         </div>
 
         {/* Desktop: Grid layout */}
-        <div className="hidden lg:grid lg:grid-cols-3 gap-6">
+        <div className="hidden lg:grid lg:grid-cols-3 gap-4 lg:gap-5">
           {galleryImages.map((image, index) => {
             const imageData = typeof image === "string" 
               ? { id: index, src: image, alt: `Hair styling example ${index + 1}`, name: `Hair Transformation ${index + 1}`, suburb: `St George, QLD` }

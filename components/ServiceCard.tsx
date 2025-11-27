@@ -35,21 +35,21 @@ export default function ServiceCard({
       {/* Subtle brand color accent bar at top */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-primary-dark to-transparent opacity-60"></div>
       
-      <div className="p-4 sm:p-5 md:p-6 flex flex-col flex-1">
+      <div className="p-4 sm:p-5 md:p-4 lg:p-5 flex flex-col flex-1">
         {/* Header with Icon and Title */}
-        <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+        <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-3 md:mb-2">
           <div className="flex-shrink-0">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/20 rounded-xl flex items-center justify-center group-hover:bg-primary/30 transition-colors border-2 border-primary/30 group-hover:border-primary/50">
-              <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
+            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-primary/20 rounded-xl flex items-center justify-center group-hover:bg-primary/30 transition-colors border-2 border-primary/30 group-hover:border-primary/50">
+              <Icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-6 md:h-6 lg:w-7 lg:h-7 text-primary" />
             </div>
           </div>
           <div className="flex-1 min-w-0 pt-1">
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-0 text-white leading-tight group-hover:text-primary transition-colors">{title}</h3>
+            <h3 className="text-lg sm:text-xl md:text-lg lg:text-xl font-bold mb-0 text-white leading-tight group-hover:text-primary transition-colors">{title}</h3>
           </div>
         </div>
 
         {/* Description */}
-        <p className="text-sm sm:text-base text-gray-200 leading-relaxed mb-4 sm:mb-5 font-medium">{description}</p>
+        <p className="text-sm sm:text-base md:text-sm lg:text-base text-gray-200 leading-relaxed mb-4 sm:mb-4 md:mb-3 font-medium">{description}</p>
 
         {/* Bullet Points */}
         {bulletPoints.length > 0 && (

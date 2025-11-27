@@ -70,15 +70,15 @@ export default function ServiceArea({
   // Don't render Framer Motion until mounted to prevent hydration errors
   if (!isMounted) {
     return (
-      <section className="py-12 md:py-20 bg-gray-800">
+      <section className="py-12 md:py-12 lg:py-16 bg-gray-800">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 px-4">Service Areas</h2>
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto px-4">
+          <div className="text-center mb-8 md:mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 md:mb-3 px-4">Service Areas</h2>
+            <p className="text-base sm:text-lg md:text-lg text-gray-300 max-w-2xl mx-auto px-4">
               Serving St George and surrounding areas in Queensland
             </p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6 md:gap-5">
             {showMap && (
               <div className="bg-gray-700 rounded-lg p-1 sm:p-2 overflow-hidden min-h-[400px] flex items-center justify-center">
                 <div className="text-center">
@@ -108,16 +108,16 @@ export default function ServiceArea({
   }
 
   return (
-    <section className="py-12 md:py-20 bg-gray-800">
+    <section className="py-12 md:py-12 lg:py-16 bg-gray-800">
       <div className="container-custom">
-        <div className={`text-center mb-12 transition-opacity duration-600 ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 px-4">Service Areas</h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto px-4">
+        <div className={`text-center mb-8 md:mb-8 transition-opacity duration-600 ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
+          <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 md:mb-3 px-4">Service Areas</h2>
+          <p className="text-base sm:text-lg md:text-lg text-gray-300 max-w-2xl mx-auto px-4">
             We proudly serve {region} and surrounding areas
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6 md:gap-5">
           {/* Interactive Map */}
           {showMap && isMounted && mapReady ? (
             <div className="bg-gray-700 rounded-lg p-1 sm:p-2 overflow-hidden transition-opacity duration-600 opacity-100">
@@ -133,8 +133,8 @@ export default function ServiceArea({
           ) : null}
 
           {/* Suburb List */}
-          <div className={`bg-gray-700 rounded-lg p-6 sm:p-8 transition-opacity duration-600 ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
-            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-white">Areas We Service</h3>
+          <div className={`bg-gray-700 rounded-lg p-5 sm:p-6 md:p-5 lg:p-6 transition-opacity duration-600 ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
+            <h3 className="text-xl sm:text-2xl md:text-xl lg:text-2xl font-bold mb-4 sm:mb-5 md:mb-4 text-white">Areas We Service</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {displaySuburbs.map((suburb, index) => (
                 <div

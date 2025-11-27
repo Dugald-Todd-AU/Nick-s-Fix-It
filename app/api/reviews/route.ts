@@ -74,6 +74,7 @@ export async function GET() {
         rating: 4.8,
         totalReviews: 47,
         source: "mock",
+        placeId: placeId || null,
       });
     }
     // Fetch from Google Places API (Text Search or Details)
@@ -100,10 +101,11 @@ export async function GET() {
     const fiveStarReviews = allReviews.filter((review) => review.rating === 5);
 
     return NextResponse.json({
-      reviews: fiveStarReviews.slice(0, 6), // Limit to 6 most recent 5-star reviews
+      reviews: fiveStarReviews.slice(0, 10), // Limit to 10 most recent 5-star reviews for desktop scroll
       rating,
       totalReviews,
       source: "google",
+      placeId, // Include placeId for Google Maps link
     });
   } catch (error) {
     // Return mock data on error to prevent site breakage
@@ -134,6 +136,7 @@ export async function GET() {
       rating: 4.9,
       totalReviews: 32,
       source: "fallback",
+      placeId: process.env.GOOGLE_PLACE_ID || null,
     }, { status: 200 }); // Always return 200 to prevent breaking the site
   }
 }

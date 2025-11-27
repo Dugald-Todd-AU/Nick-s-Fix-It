@@ -5,7 +5,7 @@ import { PhoneIcon } from "@heroicons/react/24/solid";
 
 export default function CTA() {
   return (
-    <section id="contact" className="py-12 sm:py-16 md:py-20 bg-primary relative overflow-hidden">
+    <section id="contact" className="py-12 sm:py-16 md:py-12 lg:py-16 bg-primary relative overflow-hidden">
       {/* Decorative accent bar */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
       
@@ -16,10 +16,10 @@ export default function CTA() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-white px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-5 md:mb-4 text-white px-4">
             Ready to Book Your Appointment?
           </h2>
-          <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-white/90 max-w-2xl mx-auto px-4 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-lg mb-6 sm:mb-7 md:mb-6 text-white/90 max-w-2xl mx-auto px-4 leading-relaxed">
             Contact {"Amber's Hair Parlour"} today to book your cut, colour, or styling appointment. Serving St George, Queensland.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center px-4 w-full sm:w-auto">

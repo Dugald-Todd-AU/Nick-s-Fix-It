@@ -71,8 +71,22 @@ export default function ServicesPage() {
     <>
       {/* Full-width Hero Section with Background Image */}
       <section className="relative min-h-[85vh] sm:min-h-screen flex items-center py-12 sm:py-16 md:py-20 overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
+        {/* Background Image - Mobile */}
+        <div className="absolute inset-0 z-0 md:hidden">
+          <Image
+            src="/Services BG V2 (1).png"
+            alt="Services Background"
+            fill
+            className="object-cover object-center"
+            priority
+            quality={90}
+          />
+          {/* Dark overlay for text readability - Mobile only */}
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+        
+        {/* Background Image - Desktop */}
+        <div className="absolute inset-0 z-0 hidden md:block">
           <Image
             src="/Servcies BG.jpg"
             alt="Services Background"
