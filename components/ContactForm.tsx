@@ -123,7 +123,7 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="relative py-12 md:py-20 bg-gray-800">
+    <section className="relative py-12 sm:py-16 md:py-20 bg-gray-800">
       {/* Background Image - Desktop */}
       <div className="absolute inset-0 z-0 hidden md:block overflow-hidden">
         <Image
@@ -141,21 +141,21 @@ export default function ContactForm() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Information */}
           <div className={`transition-opacity duration-600 ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Get In Touch</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-white">Get In Touch</h2>
             <p className="text-gray-300 mb-6 sm:mb-8 text-base sm:text-lg leading-relaxed">
               Ready to book your service? Contact us today to schedule your vehicle servicing or repairs.
             </p>
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <PhoneIcon className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <PhoneIcon className="w-6 h-6 text-secondary" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-white mb-1">Phone</h3>
                   <a
                     href={`tel:0746255654`}
-                    className="text-primary hover:text-primary-dark transition-colors text-lg"
+                    className="text-secondary hover:text-secondary/80 transition-colors text-lg"
                   >
                     {"(07) 4625 5654"}
                   </a>
@@ -164,15 +164,15 @@ export default function ContactForm() {
               </div>
 
               {("{{EMAIL_ADDRESS}}" !== "{{EMAIL_ADDRESS}}") && (
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <EnvelopeIcon className="w-6 h-6 text-primary" />
+                  <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <EnvelopeIcon className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-white mb-1">Email</h3>
                     <a
                       href={`mailto:{{EMAIL_ADDRESS}}`}
-                      className="text-primary hover:text-primary-dark transition-colors"
+                      className="text-secondary hover:text-secondary/80 transition-colors"
                     >
                       {"{{EMAIL_ADDRESS}}"}
                     </a>
@@ -181,8 +181,8 @@ export default function ContactForm() {
               )}
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <MapPinIcon className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MapPinIcon className="w-6 h-6 text-secondary" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-white mb-1">Location</h3>
@@ -194,8 +194,8 @@ export default function ContactForm() {
           </div>
 
           {/* Contact Form */}
-          <div className={`bg-gray-700 p-4 sm:p-6 md:p-8 rounded-lg transition-opacity duration-600 ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
-            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Book your service</h3>
+          <div className={`bg-gray-700/90 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-lg border border-gray-600/50 shadow-xl transition-opacity duration-600 ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-white">Book your service</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
@@ -211,7 +211,7 @@ export default function ContactForm() {
                     value={formData.name}
                     onChange={handleChange}
                     autoComplete="name"
-                    className="w-full pl-10 pr-4 py-3.5 sm:py-3 text-base bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary touch-manipulation"
+                    className="w-full pl-10 pr-4 py-3.5 sm:py-3 text-base bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary touch-manipulation"
                     placeholder="Your name"
                   />
                 </div>
@@ -232,7 +232,7 @@ export default function ContactForm() {
                     onChange={handleChange}
                     autoComplete="tel"
                     inputMode="tel"
-                    className="w-full pl-10 pr-4 py-3.5 sm:py-3 text-base bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary touch-manipulation"
+                    className="w-full pl-10 pr-4 py-3.5 sm:py-3 text-base bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary touch-manipulation"
                     placeholder="Your phone number"
                   />
                 </div>
@@ -252,7 +252,7 @@ export default function ContactForm() {
                     onChange={handleChange}
                     autoComplete="email"
                     inputMode="email"
-                    className="w-full pl-10 pr-4 py-3.5 sm:py-3 text-base bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary touch-manipulation"
+                    className="w-full pl-10 pr-4 py-3.5 sm:py-3 text-base bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary touch-manipulation"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -268,7 +268,7 @@ export default function ContactForm() {
                   required
                   value={formData.serviceNeeded}
                   onChange={handleChange}
-                  className="w-full px-4 py-3.5 sm:py-3 text-base bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary touch-manipulation appearance-none"
+                  className="w-full px-4 py-3.5 sm:py-3 text-base bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-secondary touch-manipulation appearance-none"
                 >
                   <option value="">Select a service</option>
                   <option value="Logbook Servicing">Logbook Servicing</option>
@@ -291,7 +291,7 @@ export default function ContactForm() {
                   rows={5}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3.5 sm:py-3 text-base bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary resize-none touch-manipulation"
+                  className="w-full px-4 py-3.5 sm:py-3 text-base bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary resize-none touch-manipulation"
                   placeholder="Tell us about your vehicle service needs..."
                 />
               </div>
@@ -309,7 +309,7 @@ export default function ContactForm() {
               <button
                 type="submit"
                 disabled={submitted || isSubmitting}
-                className="w-full px-6 py-3.5 sm:py-3 bg-primary hover:bg-primary-dark active:bg-primary-dark disabled:bg-gray-600 disabled:cursor-not-allowed text-white rounded-lg font-semibold text-base transition-all active:scale-95 touch-manipulation min-h-[48px] flex items-center justify-center gap-2"
+                className="w-full px-6 py-3.5 sm:py-3 bg-secondary hover:bg-secondary/90 active:bg-secondary/90 disabled:bg-gray-600 disabled:cursor-not-allowed text-white rounded-lg font-semibold text-base transition-all active:scale-95 touch-manipulation min-h-[48px] flex items-center justify-center gap-2"
               >
                 {isSubmitting ? (
                   <>

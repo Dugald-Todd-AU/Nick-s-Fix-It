@@ -11,7 +11,7 @@ const ServiceMap = dynamic(
     return { default: () => (
       <div className="w-full h-full min-h-[400px] bg-gray-700 rounded-lg flex items-center justify-center">
         <div className="text-center">
-          <MapPinIcon className="w-16 h-16 text-primary mx-auto mb-4" />
+                  <MapPinIcon className="w-16 h-16 text-secondary mx-auto mb-4" />
           <p className="text-gray-400">Map unavailable</p>
         </div>
       </div>
@@ -95,7 +95,7 @@ export default function ServiceArea({
                     key={index}
                     className="flex items-center gap-2 text-sm sm:text-base text-gray-300"
                   >
-                    <MapPinIcon className="w-5 h-5 text-primary flex-shrink-0" />
+                    <MapPinIcon className="w-5 h-5 text-secondary flex-shrink-0" />
                     <span>{suburb}</span>
                   </div>
                 ))}
@@ -139,7 +139,7 @@ export default function ServiceArea({
               {displaySuburbs.map((suburb, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-2 text-sm sm:text-base text-gray-300 hover:text-primary transition-colors touch-manipulation"
+                  className="flex items-center gap-2 text-sm sm:text-base text-gray-300 hover:text-secondary transition-colors touch-manipulation"
                 >
                   <MapPinIcon className="w-5 h-5 text-primary flex-shrink-0" />
                   <span>{suburb}</span>
