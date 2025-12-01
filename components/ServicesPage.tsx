@@ -127,7 +127,7 @@ export default function ServicesPage() {
         </div>
         
         {/* Content */}
-        <div className="container-custom relative z-10 w-full pt-8 sm:pt-12 md:pt-0">
+        <div className="container-custom relative z-10 w-full pt-8 sm:pt-12 md:pt-0 mt-[10vh] md:mt-0">
           <motion.div
             initial={{opacity: 0, y: 20}}
             animate={{opacity: 1, y: 0}}
