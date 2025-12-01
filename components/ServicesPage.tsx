@@ -97,7 +97,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* Full-width Hero Section with Background Image */}
-      <section className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-screen flex items-start md:items-center py-12 sm:py-16 md:py-20 overflow-hidden">
+      <section className="relative min-h-[85vh] sm:min-h-[80vh] md:min-h-screen flex items-start md:items-center py-8 sm:py-12 md:py-20 overflow-hidden">
         {/* Background Image - Mobile */}
         <div className="absolute inset-0 z-0 md:hidden">
           <Image
@@ -127,7 +127,7 @@ export default function ServicesPage() {
         </div>
         
         {/* Content */}
-        <div className="container-custom relative z-10 w-full pt-16 sm:pt-20 md:pt-0">
+        <div className="container-custom relative z-10 w-full pt-8 sm:pt-12 md:pt-0">
           <motion.div
             initial={{opacity: 0, y: 20}}
             animate={{opacity: 1, y: 0}}
