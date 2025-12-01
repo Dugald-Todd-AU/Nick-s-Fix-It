@@ -173,14 +173,17 @@ export default function ServicesPage() {
           </div>
 
           {/* Mobile: New Content */}
-          <div className="md:hidden max-w-2xl mx-auto">
-            <div className="bg-[#1A2333] rounded-lg p-6 border border-white/10">
-              <p className="text-white text-base leading-relaxed mb-4 font-semibold">
-                Honest service, expert repairs and fast turnaround times.
-              </p>
-              <p className="text-gray-200 text-base leading-relaxed">
-                <span className="text-white font-semibold">Nick's Fix It</span> provides comprehensive automotive servicing for all makes and models, helping St George drivers stay safe and moving with confidence.
-              </p>
+          <div className="md:hidden max-w-2xl mx-auto space-y-4">
+            <div className="relative">
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-blue-500 to-purple-500 rounded-full"></div>
+              <div className="pl-6">
+                <p className="text-white text-lg leading-relaxed mb-3 font-bold">
+                  Honest service, expert repairs and fast turnaround times.
+                </p>
+                <p className="text-gray-300 text-base leading-relaxed">
+                  <span className="text-primary font-semibold">Nick's Fix It</span> provides comprehensive automotive servicing for all makes and models, helping St George drivers stay safe and moving with confidence.
+                </p>
+              </div>
             </div>
           </div>
         </motion.div>
