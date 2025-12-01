@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-8 md:mb-12">
           {/* Business Info */}
           <div>
-            <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-5 text-primary">Nick's Fix It</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-5 text-secondary">Nick's Fix It</h3>
             <p className="text-base md:text-lg text-gray-300 mb-4 md:mb-5 leading-relaxed">
               Reliable servicing and repairs for St George drivers. Honest, quality automotive care for all makes and models.
             </p>

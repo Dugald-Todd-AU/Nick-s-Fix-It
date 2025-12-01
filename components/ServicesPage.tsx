@@ -161,7 +161,7 @@ export default function ServicesPage() {
             <div className="bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg p-6 lg:p-8 border border-primary/30">
               <h3 className="text-primary text-xl lg:text-2xl font-bold mb-4">Reliable Service</h3>
               <p className="text-gray-200 text-base lg:text-lg leading-relaxed">
-                At <span className="text-primary font-semibold">Nick's Fix It</span>, we provide reliable mechanical repairs and servicing for drivers across St George.
+                At <span className="text-secondary font-semibold">Nick's Fix It</span>, we provide reliable mechanical repairs and servicing for drivers across St George.
               </p>
             </div>
             <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/5 rounded-lg p-6 lg:p-8 border border-blue-500/30">
@@ -181,7 +181,7 @@ export default function ServicesPage() {
                   Honest service, expert repairs and fast turnaround times.
                 </p>
                 <p className="text-gray-300 text-base leading-relaxed">
-                  <span className="text-primary font-semibold">Nick's Fix It</span> provides comprehensive automotive servicing for all makes and models, helping St George drivers stay safe and moving with confidence.
+                  <span className="text-secondary font-semibold">Nick's Fix It</span> provides comprehensive automotive servicing for all makes and models, helping St George drivers stay safe and moving with confidence.
                 </p>
               </div>
             </div>
