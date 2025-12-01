@@ -7,7 +7,7 @@ import {
   DocumentCheckIcon,
   WrenchScrewdriverIcon,
   CogIcon,
-  BatteryIcon,
+  Battery0Icon,
   CloudIcon,
   TruckIcon,
 } from "@heroicons/react/24/solid";
@@ -56,7 +56,7 @@ export default function ServicesPage() {
     {
       title: "Tyres & Batteries",
       description: "Tyre replacement, puncture repairs, battery testing + replacement. Keep your vehicle rolling with quality tyres and reliable batteries.",
-      icon: BatteryIcon,
+      icon: Battery0Icon,
       bulletPoints: [
         "Tyre replacement and fitting",
         "Puncture repairs",

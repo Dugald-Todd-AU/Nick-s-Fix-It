@@ -5,7 +5,7 @@ import ServiceCard from "./ServiceCard";
 import {
   WrenchScrewdriverIcon,
   CogIcon,
-  BatteryIcon,
+  Battery0Icon,
   CloudIcon,
   TruckIcon,
   DocumentCheckIcon,
@@ -31,7 +31,7 @@ export default function Services() {
     {
       title: "Tyres & Batteries",
       description: `Tyre replacement, puncture repairs, battery testing + replacement. Keep your vehicle rolling with quality tyres and reliable batteries.`,
-      icon: BatteryIcon,
+      icon: Battery0Icon,
     },
     {
       title: "Air Conditioning",
