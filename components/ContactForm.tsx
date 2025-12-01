@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { PhoneIcon, EnvelopeIcon, UserIcon, MapPinIcon } from "@heroicons/react/24/outline";
+import { PhoneIcon, EnvelopeIcon, UserIcon, MapPinIcon, ClockIcon } from "@heroicons/react/24/outline";
 
 export default function ContactForm() {
   const [isMounted, setIsMounted] = useState(false);
@@ -188,6 +188,21 @@ export default function ContactForm() {
                   <h3 className="font-semibold text-white mb-1">Location</h3>
                   <p className="text-gray-300">{"St George, Queensland"}</p>
                   <p className="text-gray-400 text-sm mt-1">Local mechanic workshop serving the St George community</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <ClockIcon className="w-6 h-6 text-secondary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-white mb-1">Business Hours</h3>
+                  <div className="text-gray-300 space-y-1">
+                    <p className="text-base">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                    <p className="text-base">Saturday: 8:00 AM - 12:00 PM</p>
+                    <p className="text-base">Sunday: Closed</p>
+                  </div>
+                  <p className="text-gray-400 text-sm mt-2">Call or book online to schedule your service</p>
                 </div>
               </div>
             </div>

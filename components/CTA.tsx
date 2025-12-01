@@ -32,7 +32,7 @@ export default function CTA() {
             </a>
             <a
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-secondary hover:bg-secondary-dark active:bg-secondary-dark text-white rounded-lg font-semibold text-base sm:text-lg transition-all active:scale-95 shadow-lg touch-manipulation min-h-[52px] w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-white text-primary hover:bg-gray-100 active:bg-gray-100 rounded-lg font-semibold text-base sm:text-lg transition-all active:scale-95 shadow-lg touch-manipulation min-h-[52px] w-full sm:w-auto"
             >
               Book a Service
             </a>
