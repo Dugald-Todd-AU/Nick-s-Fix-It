@@ -3,14 +3,14 @@ import { PhoneIcon, EnvelopeIcon, MapPinIcon, ClockIcon, GlobeAltIcon } from "@h
 
 export default function Footer() {
   return (
-    <footer className="bg-black border-t border-black/20 py-8 sm:py-12 md:py-16">
+    <footer className="bg-black border-t border-white/10 py-12 md:py-16">
       <div className="container-custom">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-8 md:mb-12">
           {/* Business Info */}
           <div>
-            <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-primary">{"Amber's Hair Parlour"}</h3>
-            <p className="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4 leading-relaxed">
-              Modern hairdressing for the St George community. Cuts, colours & styling inside a warm, boutique hair parlour.
+            <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-5 text-primary">Nick's Fix It</h3>
+            <p className="text-base md:text-lg text-gray-300 mb-4 md:mb-5 leading-relaxed">
+              Reliable servicing and repairs for St George drivers. Honest, quality automotive care for all makes and models.
             </p>
             <div className="flex flex-col space-y-2">
               <div className="flex items-start gap-2 text-sm sm:text-base text-gray-400">
@@ -22,7 +22,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-3 sm:mb-4 text-white text-base sm:text-lg">Quick Links</h4>
+            <h4 className="font-bold mb-4 md:mb-5 text-white text-lg md:text-xl">Quick Links</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/" className="text-sm sm:text-base text-gray-400 hover:text-primary transition-colors touch-manipulation inline-block py-1">
@@ -44,26 +44,28 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold mb-3 sm:mb-4 text-white text-base sm:text-lg">Our Services</h4>
+            <h4 className="font-bold mb-4 md:mb-5 text-white text-lg md:text-xl">Our Services</h4>
             <ul className="space-y-2 text-sm sm:text-base text-gray-400">
-              <li>{"Women's Cuts & Styling"}</li>
-              <li>{"Colour, Foils & Lightening"}</li>
-              <li>{"Men's Cuts"}</li>
-              <li>{"Special Occasion Hair"}</li>
+              <li>Logbook Servicing</li>
+              <li>Mechanical Repairs</li>
+              <li>Diagnostics</li>
+              <li>Tyres & Batteries</li>
+              <li>Air Conditioning</li>
+              <li>4WD & Rural Vehicle Servicing</li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold mb-3 sm:mb-4 text-white text-base sm:text-lg">Contact Us</h4>
+            <h4 className="font-bold mb-4 md:mb-5 text-white text-lg md:text-xl">Contact Us</h4>
             <ul className="space-y-2 sm:space-y-3">
               <li>
                   <a
-                  href={`tel:0746251693`}
+                  href={`tel:0746255654`}
                   className="flex items-center gap-2 text-sm sm:text-base text-gray-400 hover:text-primary transition-colors touch-manipulation py-1"
                 >
                   <PhoneIcon className="w-5 h-5 flex-shrink-0" />
-                  <span>{"(07) 4625 1693"}</span>
+                  <span>{"(07) 4625 5654"}</span>
                 </a>
               </li>
               {("{{EMAIL_ADDRESS}}" !== "{{EMAIL_ADDRESS}}") && (
@@ -82,7 +84,7 @@ export default function Footer() {
                   <ClockIcon className="w-5 h-5 flex-shrink-0 mt-0.5" />
                   <div className="flex flex-col">
                     <span className="font-medium text-gray-300 mb-1">Hours</span>
-                    <span className="leading-relaxed">{"Call to book your appointment"}</span>
+                    <span className="leading-relaxed">{"Call to book your service"}</span>
                   </div>
                 </div>
               </li>
@@ -92,14 +94,14 @@ export default function Footer() {
                 href="/contact"
                 className="inline-block px-6 py-2 bg-primary hover:bg-primary-dark text-white rounded-lg font-semibold transition-colors"
               >
-                Book your appointment
+                Book a Service
               </a>
             </div>
           </div>
         </div>
 
         {/* Social Links */}
-        <div className="pt-8 border-t border-black/20 mb-6">
+        <div className="pt-8 border-t border-white/10 mb-8">
           <div className="flex items-center justify-center gap-4">
             {("{{SOCIAL_FACEBOOK}}" !== "{{SOCIAL_FACEBOOK}}") && (
               <a
@@ -142,26 +144,31 @@ export default function Footer() {
         </div>
 
         {/* Legal Information */}
-        <div className="pt-6 border-t border-black/20 mb-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-gray-500">
+        <div className="pt-8 border-t border-white/10 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-base text-gray-400">
             <div>
-              <span className="font-medium text-gray-400">Location:</span> St George, Queensland
+              <span className="font-semibold text-gray-300">Location:</span> St George, Queensland
             </div>
             <div>
-              <span className="font-medium text-gray-400">Phone:</span> (07) 4625 1693
+              <span className="font-semibold text-gray-300">Phone:</span> (07) 4625 5654
             </div>
             <div>
-              <span className="font-medium text-gray-400">Services:</span> Cuts, Colour & Styling
+              <span className="font-semibold text-gray-300">Services:</span> Servicing & Repairs
             </div>
           </div>
         </div>
 
         {/* Legal Links & Copyright */}
-        <div className="pt-6 border-t border-black/20">
+        <div className="pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-500 text-sm text-center md:text-left">
-              © {new Date().getFullYear()} {"Amber's Hair Parlour"}. All rights reserved.
-            </p>
+            <div className="text-center md:text-left">
+              <p className="text-gray-300 text-base font-medium mb-1">
+                © {new Date().getFullYear()} Nick's Fix It. All rights reserved.
+              </p>
+              <p className="text-gray-400 text-sm">
+                Local mechanic servicing St George, Queensland.
+              </p>
+            </div>
             <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs sm:text-sm text-gray-500">
               <Link href="/privacy" className="hover:text-primary transition-colors">
                 Privacy Policy
@@ -171,9 +178,9 @@ export default function Footer() {
                 Terms of Service
               </Link>
               <span>•</span>
-              <span>Experienced Stylists</span>
+              <span>Experienced Mechanic</span>
               <span>•</span>
-              <span>Boutique Salon</span>
+              <span>Local Workshop</span>
             </div>
           </div>
         </div>

@@ -64,7 +64,7 @@ export default function GoogleReviews() {
     const placeId = reviewsData?.placeId;
     return placeId 
       ? `https://www.google.com/maps/place/?q=place_id:${placeId}`
-      : "https://www.google.com/maps/search/?api=1&query=Amber's+Hair+Parlour+St+George+Queensland";
+      : "https://www.google.com/maps/search/?api=1&query=Nick's+Fix+It+St+George+Queensland";
   }, [reviewsData?.placeId]);
 
   // Memoize event handlers
@@ -120,9 +120,9 @@ export default function GoogleReviews() {
     return (
       <section id="testimonials" className="py-12 sm:py-16 md:py-12 lg:py-16 bg-gray-800">
         <div className="container-custom">
-          <div className="text-center mb-8 sm:mb-10 md:mb-8">
+          <div className="text-center mb-8 sm:mb-10 md:mb-8 px-4">
             <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 md:mb-3 px-4">
-              What Our Customers Say
+              Trusted by Drivers Across St George
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-4">
@@ -150,17 +150,17 @@ export default function GoogleReviews() {
   const { rating, totalReviews } = reviewsData;
 
   return (
-    <section id="testimonials" className="py-12 sm:py-16 md:py-12 lg:py-16 bg-gray-800">
+    <section id="testimonials" className="py-12 sm:py-16 md:py-20 bg-[#0B1627]">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-8 sm:mb-10 md:mb-8"
+          className="text-center mb-10 sm:mb-12 md:mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 md:mb-3 px-4">
-            What Our Customers Say
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-5 px-4 text-white">
+            What Locals Say About Nick's Fix It
           </h2>
           {rating > 0 && (
             <div className="flex items-center justify-center gap-2 mt-3 md:mt-2">
@@ -186,7 +186,7 @@ export default function GoogleReviews() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="bg-gray-700 p-4 sm:p-5 rounded-lg hover:bg-gray-600 transition-all duration-200 ease-out hover:shadow-lg hover:scale-105 hover:-translate-y-1 touch-manipulation flex flex-col"
+              className="bg-[#1A2333] border border-white/6 p-5 md:p-6 rounded-xl hover:bg-[#121B29] hover:border-primary/30 transition-all duration-200 ease-out hover:shadow-lg hover:scale-105 hover:-translate-y-1 touch-manipulation flex flex-col"
             >
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
@@ -228,7 +228,7 @@ export default function GoogleReviews() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="bg-gray-700 p-5 rounded-lg hover:bg-gray-600 transition-all duration-200 ease-out hover:shadow-lg hover:scale-105 hover:-translate-y-1 flex flex-col min-w-[320px] max-w-[320px]"
+                className="bg-[#1A2333] border border-white/6 p-6 rounded-xl hover:bg-[#121B29] hover:border-primary/30 transition-all duration-200 ease-out hover:shadow-lg hover:scale-105 hover:-translate-y-1 flex flex-col min-w-[320px] max-w-[320px]"
               >
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -245,7 +245,7 @@ export default function GoogleReviews() {
                 <p className="text-gray-300 mb-4 flex-1 leading-relaxed">
                   &quot;{review.text}&quot;
                 </p>
-                <div className="border-t border-gray-600 pt-4 mt-auto">
+                <div className="border-t border-white/10 pt-4 mt-auto">
                   <p className="font-semibold text-white">{review.author_name}</p>
                   <p className="text-sm text-gray-400">
                     {review.relative_time_description}

@@ -13,6 +13,28 @@
     -webkit-overflow-scrolling: touch;
     /* Prevent text size adjustment on iOS */
     -webkit-text-size-adjust: 100%;
+    /* Improved typography */
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  /* Typography hierarchy */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    font-weight: 800;
+  }
+
+  h2 {
+    font-weight: 700;
+  }
+
+  h3, h4 {
+    font-weight: 600;
   }
 
   /* Better touch targets */
@@ -55,7 +77,26 @@
 
 @layer components {
   .container-custom {
-    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+    @apply mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  @keyframes scroll-banner {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .animate-scroll-banner {
+    animation: scroll-banner 30s linear infinite;
+  }
+  
+  .animate-scroll-banner:hover {
+    animation-play-state: paused;
   }
 }
 

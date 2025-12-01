@@ -4,65 +4,92 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import ServiceCard from "./ServiceCard";
 import {
-  ScissorsIcon,
-  SparklesIcon,
-  UserIcon,
-  HeartIcon,
+  DocumentCheckIcon,
+  WrenchScrewdriverIcon,
+  CogIcon,
+  BatteryIcon,
+  CloudIcon,
+  TruckIcon,
 } from "@heroicons/react/24/solid";
 
 export default function ServicesPage() {
   const services = [
     {
-      title: "Women's Cuts & Styling",
-      description: "Expert haircuts and styling tailored to you. From classic bobs to modern shags, we create looks that enhance your natural beauty.",
-      icon: ScissorsIcon,
+      title: "Logbook Servicing",
+      description: "All makes and models, warranty-safe servicing. Keep your vehicle running smoothly with professional logbook servicing that maintains your warranty.",
+      icon: DocumentCheckIcon,
       bulletPoints: [
-        "Precision cuts for all hair types",
-        "Layered cuts and texturising",
-        "Blunt cuts and one-length styles",
-        "Styling and blow-drying",
-        "Hair consultations",
-        "Maintenance trims",
+        "Manufacturer-approved servicing",
+        "Warranty-safe maintenance",
+        "All makes and models",
+        "Oil and filter changes",
+        "Fluid top-ups and checks",
+        "Comprehensive vehicle inspections",
       ],
     },
     {
-      title: "Colour, Foils & Lightening",
-      description: "Professional colour services using premium products. Specialising in blonding, foils, and creative colour work.",
-      icon: SparklesIcon,
+      title: "Mechanical Repairs",
+      description: "Brakes, suspension, clutch, cooling system, engine work. Expert repairs to get you back on the road safely and reliably.",
+      icon: WrenchScrewdriverIcon,
       bulletPoints: [
-        "Full head colour and root touch-ups",
-        "Highlights and lowlights",
-        "Balayage and ombré",
-        "Foils (partial and full head)",
-        "Blonding and lightening",
-        "Colour correction",
-        "Toner and gloss treatments",
+        "Brake repairs and replacements",
+        "Suspension and steering",
+        "Clutch repairs",
+        "Cooling system repairs",
+        "Engine diagnostics and repairs",
+        "Transmission servicing",
       ],
     },
     {
-      title: "Men's Cuts",
-      description: "Classic and contemporary men's haircuts in a welcoming, boutique atmosphere. Walk-ins welcome, appointments preferred.",
-      icon: UserIcon,
+      title: "Diagnostics",
+      description: "Scan tools, fault detection, warning light troubleshooting. Fast and accurate diagnosis of vehicle issues using modern diagnostic equipment.",
+      icon: CogIcon,
       bulletPoints: [
-        "Classic short back and sides",
-        "Modern fades and tapers",
-        "Textured crops and scissor cuts",
-        "Longer men's styles",
-        "Beard trims and styling",
-        "Style consultations",
+        "Computer diagnostics",
+        "Warning light diagnosis",
+        "Fault code reading",
+        "Performance testing",
+        "Electrical system checks",
+        "Pre-purchase inspections",
       ],
     },
     {
-      title: "Special Occasion Hair",
-      description: "Perfect styling for your special moments. Elegant updos, soft curls, and sleek styles. Book ahead to secure your preferred time.",
-      icon: HeartIcon,
+      title: "Tyres & Batteries",
+      description: "Tyre replacement, puncture repairs, battery testing + replacement. Keep your vehicle rolling with quality tyres and reliable batteries.",
+      icon: BatteryIcon,
       bulletPoints: [
-        "Wedding hair styling",
-        "Formal and prom updos",
-        "Bridal party styling",
-        "Special event curls and waves",
-        "Elegant chignons and buns",
-        "Half-up, half-down styles",
+        "Tyre replacement and fitting",
+        "Puncture repairs",
+        "Wheel alignment",
+        "Battery testing and replacement",
+        "Tyre pressure checks",
+        "Tyre rotation and balancing",
+      ],
+    },
+    {
+      title: "Air Conditioning",
+      description: "Re-gas, leak detection, full AC system repairs. Stay cool with professional air conditioning services for all vehicle types.",
+      icon: CloudIcon,
+      bulletPoints: [
+        "AC re-gas and regassing",
+        "Leak detection and repair",
+        "AC system diagnostics",
+        "Compressor repairs",
+        "Filter replacement",
+        "Climate control servicing",
+      ],
+    },
+    {
+      title: "4WD & Rural Vehicle Servicing",
+      description: "Utes, farm vehicles, heavy-use 4x4 servicing. Specialised care for rural and off-road vehicles that work hard.",
+      icon: TruckIcon,
+      bulletPoints: [
+        "4WD servicing",
+        "Ute and farm vehicle maintenance",
+        "Heavy-duty vehicle care",
+        "Off-road vehicle expertise",
+        "Differential servicing",
+        "Transfer case maintenance",
       ],
     },
   ];
@@ -70,14 +97,14 @@ export default function ServicesPage() {
   return (
     <>
       {/* Full-width Hero Section with Background Image */}
-      <section className="relative min-h-[85vh] sm:min-h-screen flex items-center py-12 sm:py-16 md:py-20 overflow-hidden">
+      <section className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-screen flex items-start md:items-center py-12 sm:py-16 md:py-20 overflow-hidden">
         {/* Background Image - Mobile */}
         <div className="absolute inset-0 z-0 md:hidden">
           <Image
-            src="/Services BG V2 (1).png"
+            src="/Services BG mobile .png"
             alt="Services Background"
             fill
-            className="object-cover object-center"
+            className="object-cover object-top grayscale"
             priority
             quality={90}
           />
@@ -88,10 +115,10 @@ export default function ServicesPage() {
         {/* Background Image - Desktop */}
         <div className="absolute inset-0 z-0 hidden md:block">
           <Image
-            src="/Servcies BG.jpg"
+            src="/Services BG People.jpg"
             alt="Services Background"
             fill
-            className="object-cover grayscale"
+            className="object-cover object-center grayscale"
             priority
             quality={90}
           />
@@ -100,7 +127,7 @@ export default function ServicesPage() {
         </div>
         
         {/* Content */}
-        <div className="container-custom relative z-10 w-full">
+        <div className="container-custom relative z-10 w-full pt-[30vh] md:pt-0">
           <motion.div
             initial={{opacity: 0, y: 20}}
             animate={{opacity: 1, y: 0}}
@@ -108,10 +135,10 @@ export default function ServicesPage() {
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 px-4">
-              <span className="text-white">Our Hairdressing Services</span>
+              <span className="text-white">Our Mechanical Services</span>
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-gray-100 max-w-2xl mx-auto px-4 leading-relaxed drop-shadow-lg">
-              Cuts, colour and styling tailored to you.
+              Quality automotive servicing and repairs for all makes and models.
             </p>
           </motion.div>
         </div>
@@ -121,17 +148,41 @@ export default function ServicesPage() {
       <section className="pt-12 md:pt-20 pb-12 md:pb-20 bg-gray-800">
         <div className="container-custom">
 
-        {/* Intro Paragraph */}
+        {/* Intro Section - Visual and Broken Up */}
         <motion.div
           initial={{opacity: 0, y: 20}}
           whileInView={{opacity: 1, y: 0}}
           viewport={{once: true}}
           transition={{duration: 0.6, delay: 0.1}}
-          className="max-w-3xl mx-auto mb-12 md:mb-16 px-6 text-center"
+          className="mb-12 md:mb-16 px-6"
         >
-          <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed">
-            At <span className="text-primary font-semibold">Amber's Hair Parlour</span>, we offer friendly, personalised hairdressing for the St George community. Our stylists specialise in modern cuts, blondes and colour work. Every service is performed with quality products and professional care.
-          </p>
+          {/* Desktop: Two Column Layout */}
+          <div className="hidden md:grid md:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
+            <div className="bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg p-6 lg:p-8 border border-primary/30">
+              <h3 className="text-primary text-xl lg:text-2xl font-bold mb-4">Reliable Service</h3>
+              <p className="text-gray-200 text-base lg:text-lg leading-relaxed">
+                At <span className="text-primary font-semibold">Nick's Fix It</span>, we provide reliable mechanical repairs and servicing for drivers across St George.
+              </p>
+            </div>
+            <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/5 rounded-lg p-6 lg:p-8 border border-blue-500/30">
+              <h3 className="text-blue-400 text-xl lg:text-2xl font-bold mb-4">Expert Care</h3>
+              <p className="text-gray-200 text-base lg:text-lg leading-relaxed">
+                With years of experience across all makes and models, Nick offers honest advice, quality workmanship and fast turnaround times to keep you moving.
+              </p>
+            </div>
+          </div>
+
+          {/* Mobile: New Content */}
+          <div className="md:hidden max-w-2xl mx-auto">
+            <div className="bg-[#1A2333] rounded-lg p-6 border border-white/10">
+              <p className="text-white text-base leading-relaxed mb-4 font-semibold">
+                Honest service, expert repairs and fast turnaround times.
+              </p>
+              <p className="text-gray-200 text-base leading-relaxed">
+                <span className="text-white font-semibold">Nick's Fix It</span> provides comprehensive automotive servicing for all makes and models, helping St George drivers stay safe and moving with confidence.
+              </p>
+            </div>
+          </div>
         </motion.div>
 
         {/* Service Cards Section */}

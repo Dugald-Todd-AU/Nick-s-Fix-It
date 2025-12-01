@@ -2,38 +2,38 @@
 
 import { motion } from "framer-motion";
 import {
-  HeartIcon,
-  SparklesIcon,
+  WrenchScrewdriverIcon,
+  ShieldCheckIcon,
   MapPinIcon,
-  UserGroupIcon,
+  ClockIcon,
 } from "@heroicons/react/24/solid";
 
 export default function WhyChooseUs() {
   const features = [
     {
-      icon: HeartIcon,
-      title: "Experienced Stylists",
-      description: "Skilled hairdressers with expertise in colour, blonding, and modern cuts",
+      icon: WrenchScrewdriverIcon,
+      title: "Experienced Mechanic",
+      description: "Years of experience across all makes and models, with expertise in rural vehicle servicing",
     },
     {
-      icon: SparklesIcon,
-      title: "Personalised Service",
-      description: "Friendly, boutique salon experience tailored to your individual style",
+      icon: ShieldCheckIcon,
+      title: "Honest & Reliable",
+      description: "Transparent pricing and honest communication. Quality workmanship you can trust",
     },
     {
       icon: MapPinIcon,
       title: "Local & Community-Driven",
-      description: `A long-standing local business serving St George with warmth and care`,
+      description: `A trusted local business serving St George drivers with dependable mechanical care`,
     },
     {
-      icon: UserGroupIcon,
-      title: "Modern Techniques",
-      description: "Premium products and contemporary styling methods for beautiful results",
+      icon: ClockIcon,
+      title: "Fast Turnaround",
+      description: "Quick diagnostics and efficient repairs to get you back on the road as soon as possible",
     },
   ];
 
   return (
-    <section className="hidden md:block py-12 md:py-12 lg:py-16 bg-gray-800">
+    <section className="hidden md:block py-16 md:py-20 bg-[#0B1627]">
       <div className="container-custom">
         <motion.div
           initial={{opacity: 0, y: 20}}
@@ -44,7 +44,7 @@ export default function WhyChooseUs() {
         >
           <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 md:mb-3 px-4">Why Choose Us</h2>
           <p className="text-base sm:text-lg md:text-lg text-gray-300 max-w-2xl mx-auto px-4">
-            A warm, boutique hair parlour serving the St George community with personalised care and modern hairdressing
+            Reliable mechanical repairs and servicing for drivers across St George. Honest advice, quality workmanship and fast turnaround times
           </p>
         </motion.div>
 
@@ -58,15 +58,15 @@ export default function WhyChooseUs() {
                 whileInView={{opacity: 1, y: 0}}
                 viewport={{once: true}}
                 transition={{duration: 0.4, delay: index * 0.1}}
-                className="bg-gray-700 p-4 sm:p-5 md:p-4 lg:p-5 rounded-lg hover:bg-gray-600 transition-all duration-200 ease-out hover:shadow-lg hover:scale-105 hover:-translate-y-1 text-center touch-manipulation"
+                className="bg-[#1A2333] border border-white/10 p-6 md:p-8 rounded-xl hover:bg-[#1E2A3F] hover:border-primary/60 transition-all duration-200 ease-out hover:shadow-lg hover:shadow-primary/30 hover:scale-105 hover:-translate-y-1 text-center touch-manipulation group"
               >
                 <div className="flex justify-center mb-3 sm:mb-3 md:mb-2">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-primary/20 rounded-full flex items-center justify-center">
-                    <Icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-6 md:h-6 lg:w-7 lg:h-7 text-primary" />
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-12 md:h-12 lg:w-14 lg:h-14 bg-primary/20 border-2 border-primary/40 rounded-full flex items-center justify-center group-hover:bg-primary/30 group-hover:border-primary/60 transition-all">
+                    <Icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-6 md:h-6 lg:w-7 lg:h-7 text-primary group-hover:text-white transition-colors" />
                   </div>
                 </div>
-                <h3 className="text-lg sm:text-xl md:text-lg lg:text-xl font-semibold mb-2 text-white">{feature.title}</h3>
-                <p className="text-sm sm:text-base md:text-sm lg:text-base text-gray-300 leading-relaxed">{feature.description}</p>
+                <h3 className="text-lg sm:text-xl md:text-lg lg:text-xl font-semibold mb-2 text-white group-hover:text-primary transition-colors">{feature.title}</h3>
+                <p className="text-sm sm:text-base md:text-sm lg:text-base text-gray-200 group-hover:text-gray-100 leading-relaxed transition-colors">{feature.description}</p>
               </motion.div>
             );
           })}

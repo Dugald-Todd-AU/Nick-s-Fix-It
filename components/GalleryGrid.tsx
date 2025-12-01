@@ -13,29 +13,29 @@ interface GalleryGridProps {
 export default function GalleryGrid({
   images,
   title = "Our Work",
-  subtitle = "Hair transformations and styling at Amber's Hair Parlour",
+  subtitle = "Quality mechanical repairs and servicing at Nick's Fix It",
 }: GalleryGridProps) {
   // Gallery images
   const defaultImages = [
     {
       id: 1,
-      src: "/HT1.png",
-      alt: "Hair transformation example 1 - Haircut, colour, or styling at Amber's Hair Parlour",
-      name: "Hair Transformation 1",
+      src: "/W1.png",
+      alt: "Mechanic performing vehicle servicing at Nick's Fix It in St George",
+      name: "Vehicle Servicing",
       suburb: "St George, QLD",
     },
     {
       id: 2,
-      src: "/HT 2.png",
-      alt: "Hair transformation example 2 - Haircut, colour, or styling at Amber's Hair Parlour",
-      name: "Hair Transformation 2",
+      src: "/W2.png",
+      alt: "Mechanic performing diagnostics on a vehicle at Nick's Fix It in St George",
+      name: "Vehicle Diagnostics",
       suburb: "St George, QLD",
     },
     {
       id: 3,
-      src: "/HT3.png",
-      alt: "Hair transformation example 3 - Haircut, colour, or styling at Amber's Hair Parlour",
-      name: "Hair Transformation 3",
+      src: "/W3.png",
+      alt: "Mechanic performing mechanical repairs at Nick's Fix It in St George",
+      name: "Mechanical Repairs",
       suburb: "St George, QLD",
     },
   ];
@@ -89,7 +89,7 @@ export default function GalleryGrid({
   const handleIndicatorClick = useCallback((index: number) => setCurrentIndex(index), []);
 
   return (
-    <section className="py-12 md:py-12 lg:py-16 bg-gray-800">
+    <section className="py-12 sm:py-16 md:py-20 bg-[#0B1627]">
       <div className="container-custom">
         {(title || subtitle) && (
           <motion.div
@@ -97,7 +97,7 @@ export default function GalleryGrid({
             whileInView={{opacity: 1, y: 0}}
             viewport={{once: true}}
             transition={{duration: 0.6}}
-            className="text-center mb-8 md:mb-8"
+            className="text-center mb-8 sm:mb-10 md:mb-8"
           >
             {title && (
               <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 md:mb-3 px-4">{title}</h2>
@@ -122,7 +122,7 @@ export default function GalleryGrid({
           >
             {galleryImages.map((image, index) => {
               const imageData = typeof image === "string" 
-                ? { id: index, src: image, alt: `Hair styling example ${index + 1}`, name: `Hair Transformation ${index + 1}`, suburb: `St George, QLD` }
+                ? { id: index, src: image, alt: `Mechanic performing ${index === 0 ? 'servicing' : index === 1 ? 'diagnostics' : 'repairs'} on a vehicle at Nick's Fix It in St George`, name: `Vehicle Service ${index + 1}`, suburb: `St George, QLD` }
                 : image;
               
               return (
@@ -145,7 +145,7 @@ export default function GalleryGrid({
                   />
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/40 transition-all duration-200 flex flex-col items-center justify-center p-4">
                     <span className="opacity-0 group-hover:opacity-100 text-white font-semibold text-lg mb-1 transition-opacity text-center">
-                      {imageData.name || "Hair Transformation"}
+                      {imageData.name || "Vehicle Service"}
                     </span>
                     <span className="opacity-0 group-hover:opacity-100 text-white/90 text-sm transition-opacity text-center">
                       {imageData.suburb || "St George, QLD"}
@@ -175,7 +175,7 @@ export default function GalleryGrid({
         <div className="hidden lg:grid lg:grid-cols-3 gap-4 lg:gap-5">
           {galleryImages.map((image, index) => {
             const imageData = typeof image === "string" 
-              ? { id: index, src: image, alt: `Hair styling example ${index + 1}`, name: `Hair Transformation ${index + 1}`, suburb: `St George, QLD` }
+              ? { id: index, src: image, alt: `Mechanic performing ${index === 0 ? 'servicing' : index === 1 ? 'diagnostics' : 'repairs'} on a vehicle at Nick's Fix It in St George`, name: `Vehicle Service ${index + 1}`, suburb: `St George, QLD` }
               : image;
             
             return (
@@ -196,7 +196,7 @@ export default function GalleryGrid({
                 />
                 <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/40 transition-all duration-200 flex flex-col items-center justify-center p-4">
                   <span className="opacity-0 group-hover:opacity-100 text-white font-semibold text-lg mb-1 transition-opacity text-center">
-                    {imageData.name || "Hair Transformation"}
+                    {imageData.name || "Vehicle Service"}
                   </span>
                   <span className="opacity-0 group-hover:opacity-100 text-white/90 text-sm transition-opacity text-center">
                     {imageData.suburb || "St George, QLD"}

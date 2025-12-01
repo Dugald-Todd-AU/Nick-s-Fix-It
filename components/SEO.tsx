@@ -6,9 +6,9 @@ import type { Metadata } from "next";
 
 export function generateMetadata(): Metadata {
   return {
-    title: "Amber's Hair Parlour — Modern Hairdressing in St George, Queensland",
-    description: "Amber's Hair Parlour offers modern hairdressing services in St George, Queensland. Cuts, colours, foils & styling in a warm, boutique hair parlour. Book your appointment at (07) 4625 1693.",
-    keywords: "hairdressing, hair salon, haircuts, hair colour, foils, styling, St George Queensland, ladies hair, men's cuts, special occasion hair",
+    title: "Nick's Fix It — Reliable Mechanic & Auto Repairs in St George, Queensland",
+    description: "Nick's Fix It provides quality automotive servicing and mechanical repairs in St George, Queensland. Logbook servicing, diagnostics, tyres, air con, and 4WD repairs. Call (07) 4625 5654.",
+    keywords: "mechanic St George QLD, car servicing St George, auto repairs St George, 4WD servicing St George, logbook servicing St George, air con regas St George, mechanic St George Queensland",
   };
 }
 

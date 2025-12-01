@@ -3,52 +3,74 @@
 import { motion } from "framer-motion";
 import ServiceCard from "./ServiceCard";
 import {
-  ScissorsIcon,
-  SparklesIcon,
-  UserIcon,
-  HeartIcon,
+  WrenchScrewdriverIcon,
+  CogIcon,
+  BatteryIcon,
+  CloudIcon,
+  TruckIcon,
+  DocumentCheckIcon,
 } from "@heroicons/react/24/solid";
 
 export default function Services() {
   const services = [
     {
-      title: "Women's Cuts & Styling",
-      description: `Expert haircuts and styling for all hair types. From classic cuts to modern trends, personalised service in our boutique salon.`,
-      icon: ScissorsIcon,
+      title: "Logbook Servicing",
+      description: `All makes and models, warranty-safe servicing. Keep your vehicle running smoothly with professional logbook servicing.`,
+      icon: DocumentCheckIcon,
     },
     {
-      title: "Colour, Foils & Lightening",
-      description: `Professional colour services including full colour, foils, balayage, and lightening. Transform your look with modern techniques.`,
-      icon: SparklesIcon,
+      title: "Mechanical Repairs",
+      description: `Brakes, suspension, clutch, cooling system, engine work. Expert repairs to get you back on the road safely.`,
+      icon: WrenchScrewdriverIcon,
     },
     {
-      title: "Men's Cuts",
-      description: `Classic and contemporary men's haircuts. Precision cuts tailored to your style in a welcoming, boutique atmosphere.`,
-      icon: UserIcon,
+      title: "Diagnostics",
+      description: `Scan tools, fault detection, warning light troubleshooting. Fast and accurate diagnosis of vehicle issues.`,
+      icon: CogIcon,
     },
     {
-      title: "Special Occasion Hair",
-      description: `Perfect styling for formals, weddings, and special events. Let us create a look that makes you feel beautiful and confident.`,
-      icon: HeartIcon,
+      title: "Tyres & Batteries",
+      description: `Tyre replacement, puncture repairs, battery testing + replacement. Keep your vehicle rolling with quality tyres and reliable batteries.`,
+      icon: BatteryIcon,
+    },
+    {
+      title: "Air Conditioning",
+      description: `Re-gas, leak detection, full AC system repairs. Stay cool with professional air conditioning services.`,
+      icon: CloudIcon,
+    },
+    {
+      title: "4WD & Rural Vehicle Servicing",
+      description: `Utes, farm vehicles, heavy-use 4x4 servicing. Specialised care for rural and off-road vehicles.`,
+      icon: TruckIcon,
     },
   ];
 
   return (
-    <section id="services" className="py-12 sm:py-16 md:py-12 lg:py-16 bg-gray-800">
-      <div className="container-custom">
+    <section id="services" className="pt-8 sm:pt-16 md:pt-16 pb-8 sm:pb-20 md:pb-20 bg-[#0B1627]">
+      <div className="container-custom px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-8 sm:mb-10 md:mb-8"
+          className="text-center mb-6 sm:mb-12 md:mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 md:mb-3 px-4">Our Services</h2>
-          <p className="text-base sm:text-lg md:text-lg text-gray-300 max-w-2xl mx-auto px-4">
-            Whether you're after a fresh cut, a full colour transformation, or something special for an event, Amber's Hair Parlour offers personalised styling for all hair types.
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-5 text-white mt-8 md:mt-0">Our Services</h2>
+          {/* Mobile: Broken up paragraph */}
+          <div className="md:hidden space-y-2 text-base text-gray-300 max-w-2xl mx-auto leading-relaxed">
+            <p>
+              From logbook servicing to full mechanical repairs, <span className="text-secondary font-semibold">Nick's Fix It</span> provides reliable automotive care.
+            </p>
+            <p>
+              Serving all makes and models in St George with honest service and quality workmanship.
+            </p>
+          </div>
+          {/* Desktop: Single paragraph */}
+          <p className="hidden md:block text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            From logbook servicing to full mechanical repairs, Nick's Fix It provides reliable automotive care for all makes and models in St George.
           </p>
         </motion.div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-7 md:gap-8">
           {services.map((service, index) => (
             <ServiceCard
               key={index}

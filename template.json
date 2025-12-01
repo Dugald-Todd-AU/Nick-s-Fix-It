@@ -26,7 +26,7 @@
     "phone": {
       "type": "string",
       "required": true,
-      "placeholder": "(07) 4625 1693",
+      "placeholder": "(07) 4625 5654",
       "description": "Contact phone number (clickable)"
     },
     "email": {
@@ -172,7 +172,7 @@
   "replacements": {
     "Amber's Hair Parlour": "businessName",
     "St George, Queensland": "region",
-    "(07) 4625 1693": "phone",
+    "(07) 4625 5654": "phone",
     "{{EMAIL_ADDRESS}}": "email",
     "Women's Cuts & Styling": "services[0]",
     "Colour, Foils & Lightening": "services[1]",

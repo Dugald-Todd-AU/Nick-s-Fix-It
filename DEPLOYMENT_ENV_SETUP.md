@@ -5,8 +5,18 @@ This guide shows you how to add your Google Reviews API credentials to your host
 ## Your Environment Variables
 
 You need to add these two variables:
-- `GOOGLE_PLACE_ID=ChIJFzQNgDZDpWsRuyVXQvWt-S8`
-- `GOOGLE_PLACES_API_KEY=AIzaSyA_2JNeXSZo99gmJJK1nzYrrSgj_Us-PrY`
+- `GOOGLE_PLACE_ID=ChIJG02wF_1n-2sR29n1j9M0TjQ` (already configured)
+- `GOOGLE_PLACES_API_KEY=your_api_key_here` (see below to get your key)
+
+### Getting Your Google Places API Key
+
+1. Go to [Google Cloud Console](https://console.cloud.google.com/)
+2. Create a new project or select an existing one
+3. Enable the **Places API** and **Places API (New)**
+4. Go to **APIs & Services** → **Credentials**
+5. Click **Create Credentials** → **API Key**
+6. Copy your API key and use it as the value for `GOOGLE_PLACES_API_KEY`
+7. **Important:** Restrict the API key to only the Places API for security
 
 ---
 
@@ -19,12 +29,12 @@ You need to add these two variables:
 4. Click **Add New**
 5. Add each variable:
    - **Name:** `GOOGLE_PLACE_ID`
-   - **Value:** `ChIJFzQNgDZDpWsRuyVXQvWt-S8`
+   - **Value:** `ChIJG02wF_1n-2sR29n1j9M0TjQ`
    - **Environment:** Select all (Production, Preview, Development)
    - Click **Save**
 6. Repeat for the API key:
    - **Name:** `GOOGLE_PLACES_API_KEY`
-   - **Value:** `AIzaSyA_2JNeXSZo99gmJJK1nzYrrSgj_Us-PrY`
+   - **Value:** `your_api_key_here`
    - **Environment:** Select all
    - Click **Save**
 7. **Important:** Go to **Deployments** tab and click **Redeploy** on your latest deployment (or push a new commit) for changes to take effect
@@ -40,12 +50,12 @@ You need to add these two variables:
 4. Click **Add a variable**
 5. Add each variable:
    - **Key:** `GOOGLE_PLACE_ID`
-   - **Value:** `ChIJFzQNgDZDpWsRuyVXQvWt-S8`
+   - **Value:** `ChIJG02wF_1n-2sR29n1j9M0TjQ`
    - **Scopes:** Select all (Production, Deploy previews, Branch deploys)
    - Click **Create variable**
 6. Repeat for the API key:
    - **Key:** `GOOGLE_PLACES_API_KEY`
-   - **Value:** `AIzaSyA_2JNeXSZo99gmJJK1nzYrrSgj_Us-PrY`
+   - **Value:** `your_api_key_here`
    - **Scopes:** Select all
    - Click **Create variable**
 7. **Trigger a new deploy** (push a commit or use "Trigger deploy" button)
@@ -62,11 +72,11 @@ You need to add these two variables:
 5. Click **+ New Variable**
 6. Add each variable:
    - **Name:** `GOOGLE_PLACE_ID`
-   - **Value:** `ChIJFzQNgDZDpWsRuyVXQvWt-S8`
+   - **Value:** `ChIJG02wF_1n-2sR29n1j9M0TjQ`
    - Click **Add**
 7. Repeat for the API key:
    - **Name:** `GOOGLE_PLACES_API_KEY`
-   - **Value:** `AIzaSyA_2JNeXSZo99gmJJK1nzYrrSgj_Us-PrY`
+   - **Value:** `your_api_key_here`
    - Click **Add**
 8. The service will automatically redeploy
 
@@ -82,11 +92,11 @@ You need to add these two variables:
 5. Click **Add Environment Variable**
 6. Add each variable:
    - **Key:** `GOOGLE_PLACE_ID`
-   - **Value:** `ChIJFzQNgDZDpWsRuyVXQvWt-S8`
+   - **Value:** `ChIJG02wF_1n-2sR29n1j9M0TjQ`
    - Click **Save Changes**
 7. Repeat for the API key:
    - **Key:** `GOOGLE_PLACES_API_KEY`
-   - **Value:** `AIzaSyA_2JNeXSZo99gmJJK1nzYrrSgj_Us-PrY`
+   - **Value:** `your_api_key_here`
    - Click **Save Changes**
 8. Service will automatically redeploy
 
@@ -101,11 +111,11 @@ You need to add these two variables:
 4. Click **Manage variables**
 5. Add each variable:
    - **Variable name:** `GOOGLE_PLACE_ID`
-   - **Value:** `ChIJFzQNgDZDpWsRuyVXQvWt-S8`
+   - **Value:** `ChIJG02wF_1n-2sR29n1j9M0TjQ`
    - Click **Save**
 6. Repeat for the API key:
    - **Variable name:** `GOOGLE_PLACES_API_KEY`
-   - **Value:** `AIzaSyA_2JNeXSZo99gmJJK1nzYrrSgj_Us-PrY`
+   - **Value:** `your_api_key_here`
    - Click **Save**
 7. Go to **App settings** → **Build settings** and click **Redeploy this version**
 
@@ -120,11 +130,11 @@ You need to add these two variables:
 4. Click **Edit**
 5. Add each variable:
    - **Key:** `GOOGLE_PLACE_ID`
-   - **Value:** `ChIJFzQNgDZDpWsRuyVXQvWt-S8`
+   - **Value:** `ChIJG02wF_1n-2sR29n1j9M0TjQ`
    - Click **Add**
 6. Repeat for the API key:
    - **Key:** `GOOGLE_PLACES_API_KEY`
-   - **Value:** `AIzaSyA_2JNeXSZo99gmJJK1nzYrrSgj_Us-PrY`
+   - **Value:** `your_api_key_here`
    - Click **Add**
 7. Click **Save** - app will redeploy automatically
 
@@ -137,16 +147,16 @@ If you're running the app yourself (Docker, VPS, etc.):
 ### Option 1: Environment File
 Create a `.env.production` file (or use your existing method):
 ```bash
-GOOGLE_PLACE_ID=ChIJFzQNgDZDpWsRuyVXQvWt-S8
-GOOGLE_PLACES_API_KEY=AIzaSyA_2JNeXSZo99gmJJK1nzYrrSgj_Us-PrY
+GOOGLE_PLACE_ID=ChIJG02wF_1n-2sR29n1j9M0TjQ
+GOOGLE_PLACES_API_KEY=your_api_key_here
 ```
 
 ### Option 2: Docker
 Add to your `docker-compose.yml`:
 ```yaml
 environment:
-  - GOOGLE_PLACE_ID=ChIJFzQNgDZDpWsRuyVXQvWt-S8
-  - GOOGLE_PLACES_API_KEY=AIzaSyA_2JNeXSZo99gmJJK1nzYrrSgj_Us-PrY
+  - GOOGLE_PLACE_ID=ChIJG02wF_1n-2sR29n1j9M0TjQ
+  - GOOGLE_PLACES_API_KEY=your_api_key_here
 ```
 
 Or use `.env` file with docker-compose (recommended).

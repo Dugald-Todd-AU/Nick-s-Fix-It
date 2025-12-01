@@ -10,20 +10,20 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#e8a4b8", // soft rose pink - feminine floral
-          dark: "#d48aa0", // deeper rose for hover states
+          DEFAULT: "#0F3A84", // deep automotive blue
+          dark: "#0A2D6B", // deeper blue for hover states
         },
         secondary: {
-          DEFAULT: "#f4a5c1", // lighter pink - delicate flower petals
-          dark: "#e88ba8", // deeper pink for hover states
+          DEFAULT: "#D10F87", // hot magenta/pink
+          dark: "#B00D73", // deeper magenta for hover states
         },
         accent: {
-          DEFAULT: "#d4a5c8", // soft lavender - feminine floral accent
-          dark: "#c08ab0", // deeper lavender for hover states
+          DEFAULT: "#1E4A9F", // lighter automotive blue accent
+          dark: "#0F3A84", // deeper blue for hover states
         },
         floral: {
-          DEFAULT: "#f5b8c8", // very soft pink - lightest floral tone
-          dark: "#e8a4b8",
+          DEFAULT: "#E11F9A", // lighter magenta highlight
+          dark: "#D10F87",
         },
       },
       fontFamily: {
