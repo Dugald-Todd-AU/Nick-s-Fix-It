@@ -101,7 +101,7 @@ export default function ServicesPage() {
         {/* Background Image - Mobile */}
         <div className="absolute inset-0 z-0 md:hidden">
           <Image
-            src="/Services BG mobile .png"
+            src="/Services BG 22.png"
             alt="Services Background"
             fill
             className="object-cover object-top grayscale"
@@ -127,7 +127,7 @@ export default function ServicesPage() {
         </div>
         
         {/* Content */}
-        <div className="container-custom relative z-10 w-full pt-[30vh] md:pt-0">
+        <div className="container-custom relative z-10 w-full pt-16 sm:pt-20 md:pt-0">
           <motion.div
             initial={{opacity: 0, y: 20}}
             animate={{opacity: 1, y: 0}}

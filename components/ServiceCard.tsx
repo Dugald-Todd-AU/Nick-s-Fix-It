@@ -44,7 +44,7 @@ export default function ServiceCard({
             </div>
           </div>
           <div className="flex-1 min-w-0 pt-1">
-            <h3 className="text-lg md:text-2xl font-semibold md:font-bold mb-0 text-[#2F66CC] md:text-white leading-tight group-hover:text-white transition-colors">{title}</h3>
+            <h3 className="text-lg md:text-2xl font-semibold md:font-bold mb-0 text-white leading-tight group-hover:text-white transition-colors">{title}</h3>
           </div>
         </div>
 
